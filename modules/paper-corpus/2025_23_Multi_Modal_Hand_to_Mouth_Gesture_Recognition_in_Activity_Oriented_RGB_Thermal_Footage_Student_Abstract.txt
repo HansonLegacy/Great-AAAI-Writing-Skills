@@ -1,0 +1,23 @@
+TITLE: Multi-Modal Hand-to-Mouth Gesture Recognition in Activity-Oriented
+OFFICIAL: Multi-Modal Hand-to-Mouth Gesture Recognition in Activity-Oriented RGB-Thermal Footage
+YEAR: 2025 | CATEGORY: Outstanding Student Paper | AUTO_TYPE: model-method
+PAGES: 3 | ABSTRACT WORDS: 0
+HAS CONTRIBUTIONS: False | HAS TEASER: False
+ABSTRACT CITATIONS: 0
+
+================================================================================
+ABSTRACT:
+================================================================================
+
+
+================================================================================
+INTRO (first 5000 chars):
+================================================================================
+
+
+================================================================================
+SECTIONS:
+================================================================================
+ImageEncoder
+
+ERROR: none

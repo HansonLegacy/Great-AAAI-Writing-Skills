@@ -1,0 +1,13 @@
+TITLE: Nowcasting Temporal Trends Using Indirect Surveys
+YEAR: 2024 | CAT: Honorable Mention - AI for Social Impact | TYPE: model-method
+ABSTRACT WC: 192 | INTRO WC: 120
+
+================================================================================
+ABSTRACT:
+================================================================================
+Indirect surveys, in which respondents provide about other people they know, have been hidden mating (nowcasting) the size of a privacy is important or the hidden population reach. Examples include estimating casualties quake, conditions among female sex workers, len ce of drug use and infectious diseases The Network Scale up Method (NSUM) is the classical approach estimates from indirect surveys, but it was shot surveys Further it requires certain assumptions and ask ing for or estimating the number of individuals spondent’s network. In recent years, surveys creasingly deployed online and can collect data (e.g., COVID-19 surveys on Facebook during pandemic). Conventional NSUM can be applied narios by analyzing the data independently at time, but this misses the opportunity of leveraging ral dimension. We propose to use the responses surveys collected over time and develop to prove that indirect surveys can provide better the trends of the hidden population over time, direct surveys and (ii) to identify appropriate gat ions to improve the estimates We demonstrate through ex tensive simulations that our approach outperforms NSUM and direct surveying methods. We also demonstrate the superiority of our approach on survey dataset of COVID-19 cases.
+
+================================================================================
+INTRO:
+================================================================================
+Direct reporting through surveys is the most method for collecting data on a given individuals in a population. It is well known surveys sometimes face reliability and efficiency as respondents may refuse to participate or misreport sensitive private information. An proach to overcome some of these issues is indirect with reporting, where respondents about people they know instead of providing about themselves. These surveys collect what aggregated relational data the literature as main advantages are primarily two: (1) privacy as the respondents do not have to report Copyright © 2024, Association for the Advancement Intelligence (www.aaai.org). All rights reserved. Ram´ırez2, D az Aranda 2 3 Aguilar2, Sergio Jose Antonio Anta2, Ortega1, Lillo3 Antonio Rosa Elvira University of Southern California, USA

@@ -1,0 +1,13 @@
+TITLE: Fractured Glass, Failing Cameras: Simulating PhysicsBased Adversarial Samples for Autonomous Driving Systems
+YEAR: 2026 | CAT: Best Poster | TYPE: model-method
+ABSTRACT WC: 333 | INTRO WC: 0
+
+================================================================================
+ABSTRACT:
+================================================================================
+While much research has recently focused physics-based adversarial samples, a critical looked category originates from physical failures board cameras components essential to the tems of autonomous vehicles. Camera failures, to external stresses causing hardware breakdown component faults, can directly jeopardize the liability of autonomous driving systems. vate the study using two separate real-world showcase that indeed glass failures would tion based neural network models to fail. velop a simulation based study using the physical the glass breakage to create perturbed scenarios, a realistic class of physics-based adversarial a finite element model (FEM)-based approach, surface cracks on the camera image by applying defined by particles within a triangular mesh. physically based rendering (PBR) techniques to istic visualizations of these physically plausible assess the safety implications, we apply the ken glass effects as image filters to two datasets KITTI and BDD 100 K as well as the large scale im age detection dataset MS-COCO. We then failure rates for critical object classes using ject detection models (YOLOv8 and Faster transformer based architecture with Pyramid formers. To further investigate the distributional these visual distortions we compute the Kull back Leib ler K L) divergence between three distinct data plying various broken glass filters to a custom tu red through a cracked windshield as well as the KITTI and Kaggle cats and dogs datasets. The K-L divergence suggests that these broken glass filters do not nificant distributional shifts. Our goal is to physics-based methodology for generating ple s that reflect real world camera failures with the over arch in gaim of improving the resilience and safety of autonomous driving systems against such physical threats. — Code https g it hub com man a vp rab haka r camera failure — https ar xiv org pdf 2405 15033 Extended version *Corresponding author Copyright © 2026, Association for the Advancement Intelligence (www.aaai.org). All rights reserved. Kusari* Prabhakar, Jwalandhar Girnar, Arpan of Michigan Transportation Research Institute 2901 Baxter Road, Room 202, Ann Arbor, MI-48103 prmanav, jwala, kusari @umich.edu { }
+
+================================================================================
+INTRO:
+================================================================================
+

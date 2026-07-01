@@ -1,0 +1,13 @@
+TITLE: Neurosymbolic Reinforcement Learning: Playing MiniHack With Probabilistic Logic Shields
+YEAR: 2025 | CAT: Demonstration Award | TYPE: model-method
+ABSTRACT WC: 145 | INTRO WC: 0
+
+================================================================================
+ABSTRACT:
+================================================================================
+Probabilistic logic shields integrate deep reinforcement learn ing (RL) with probabilistic logic reasoning that operate in uncertain environments while guarantees with respect to logical constraints, properties. In this demo paper, we introduce a streamlines the design of custom MiniHack where neurosymbolic RL agents leverage shields to learn safe and interpretable policies guarantees. Our framework allows expert users fine and train agents that integrate deep neural probabilistic logic in arbitrarily complex games: exploration to planning and interacting with tion ally we provide a web based platform that showcases our application, offering an interactive interface community to experiment with and explore the capabilities of neurosymbolic reinforcement learning. This rier for researchers and developers, making it wider audience to engage with safety-critical Code — https g it hub com ML KU Leuven nes y mini hack Website — https d tai cs ku leuven be projects nes y
+
+================================================================================
+INTRO:
+================================================================================
+

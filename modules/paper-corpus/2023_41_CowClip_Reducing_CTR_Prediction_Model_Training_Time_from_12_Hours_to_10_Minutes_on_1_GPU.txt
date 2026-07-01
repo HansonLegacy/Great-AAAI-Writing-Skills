@@ -1,0 +1,25 @@
+TITLE: CowClip: Reducing CTR Prediction Model Training Time from 12 Hours to 10
+OFFICIAL: CowClip: Reducing CTR Prediction Model Training Time from 12 hours to 10 minutes on 1 GPU
+YEAR: 2023 | CATEGORY: Distinguished Paper | AUTO_TYPE: model-method
+PAGES: 9 | ABSTRACT WORDS: 0
+HAS CONTRIBUTIONS: False | HAS TEASER: True
+ABSTRACT CITATIONS: 0
+
+================================================================================
+ABSTRACT:
+================================================================================
+
+
+================================================================================
+INTRO (first 5000 chars):
+================================================================================
+
+
+================================================================================
+SECTIONS:
+================================================================================
+Output
+Wide or Cross Part Layer k
+NoScale SqrtScale LinearScale
+
+ERROR: none

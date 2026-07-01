@@ -1,0 +1,26 @@
+TITLE: Next-Generation Metalens Vision System:
+OFFICIAL: Next-Generation Metalens Vision System: Powered by AI and Applied to AI
+YEAR: 2026 | CATEGORY: Best Demonstration | AUTO_TYPE: model-method
+PAGES: 3 | ABSTRACT WORDS: 0
+HAS CONTRIBUTIONS: False | HAS TEASER: False
+ABSTRACT CITATIONS: 0
+
+================================================================================
+ABSTRACT:
+================================================================================
+
+
+================================================================================
+INTRO (first 5000 chars):
+================================================================================
+
+
+================================================================================
+SECTIONS:
+================================================================================
+IndependentResearcher
+Monochromatic ized into software solutions for integration into broader vi-
+Colour
+Acknowledgements
+
+ERROR: none

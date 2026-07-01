@@ -1,0 +1,13 @@
+TITLE: LLM2CLIP: Powerful Language Model Unlocks Richer Cross-Modality Representation
+YEAR: 2026 | CAT: Outstanding Paper | TYPE: model-method
+ABSTRACT WC: 146 | INTRO WC: 119
+
+================================================================================
+ABSTRACT:
+================================================================================
+CLIP is a seminal multimodal model that and text into a shared representation space learning on billions of image–caption pairs. the rapid progress of large language models investigate how the superior linguistic broad world knowledge of LLMs can further CLIP particularly in handling long, complex introduce an efficient fine-tuning framework an LLM into a pretrained CLIP while incurring same training cost as regular CLIP fine-tuning. first embedding ize s the LLM for the CLIP couples it to the pretrained CLIP vision a lightweight adaptor trained on only a few age–caption pairs. With this strategy we achieve formance gains—without large-scale retraining—over of-the-art CLIP variants such as EVA02 The LLM-enhanced CLIP delivers consistent across a wide spectrum of downstream linear-probe classification, zero-shot image–text with both short and long captions (in English gu ages zero shot supervised image segmentation object de tection, and used as tokenizer for multimodal benchmarks.
+
+================================================================================
+INTRO:
+================================================================================
+CLIP (Radford et al. 2021; Tschannen et emerged as one of the most influential dation models in recent years. Trained on millions to tens of billions of image–text trastive pre-training, it embeds vision and retriever, a shared representation space. As a derpins zero-shot classification, detection, and—most notably image text retrieval. tractor, it supports a broad spectrum of cations, from image/video understanding to and text-to-video generation. For instance, large language models such as LLaVA (Li et *These authors contributed equally. †Corresponding authors. ‡Project Lead. Copyright © 2026, Association for the Advancement Intelligence (www.aaai.org). All rights reserved. Yang2†‡, Luo2, Yang2, Naseem3, Yifan Xufang Yuqing Usman Dai2, Chen2, Luo2, Qiu2, Hu1† Dongdong Chong Lili Liang Science dnd Technology, Tongji Univeristy, Shanghai, China

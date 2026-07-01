@@ -1,0 +1,25 @@
+TITLE: Computing Game Symmetries and Equilibria That Respect Them
+OFFICIAL: Computing Game Symmetries and Equilibria That Respect Them
+YEAR: 2025 | CATEGORY: Best Poster | AUTO_TYPE: model-method
+PAGES: 10 | ABSTRACT WORDS: 0
+HAS CONTRIBUTIONS: False | HAS TEASER: True
+ABSTRACT CITATIONS: 0
+
+================================================================================
+ABSTRACT:
+================================================================================
+
+
+================================================================================
+INTRO (first 5000 chars):
+================================================================================
+
+
+================================================================================
+SECTIONS:
+================================================================================
+CarnegieMellonUniversity
+Gamesymmetries Gameisomorphisms Computingasymmetricequilibrium
+PreliminariesonGameSymmetries NotethattheidentitymapIdAisalwaysagamesymmetry
+
+ERROR: none

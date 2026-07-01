@@ -1,0 +1,23 @@
+TITLE: Efficient Rectification of Neuro-Symbolic Reasoning Inconsistencies
+OFFICIAL: Efficient Rectification of Neuro-Symbolic Reasoning Inconsistencies by Abductive Reflection
+YEAR: 2025 | CATEGORY: Outstanding Paper | AUTO_TYPE: model-method
+PAGES: 9 | ABSTRACT WORDS: 0
+HAS CONTRIBUTIONS: False | HAS TEASER: False
+ABSTRACT CITATIONS: 0
+
+================================================================================
+ABSTRACT:
+================================================================================
+
+
+================================================================================
+INTRO (first 5000 chars):
+================================================================================
+
+
+================================================================================
+SECTIONS:
+================================================================================
+Experiments
+
+ERROR: none

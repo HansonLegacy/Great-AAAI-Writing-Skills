@@ -1,0 +1,23 @@
+TITLE: Misspecification in Inverse Reinforcement Learning
+OFFICIAL: Misspecification in Inverse Reinforcement Learning
+YEAR: 2023 | CATEGORY: Outstanding Paper | AUTO_TYPE: model-method
+PAGES: 8 | ABSTRACT WORDS: 0
+HAS CONTRIBUTIONS: False | HAS TEASER: False
+ABSTRACT CITATIONS: 0
+
+================================================================================
+ABSTRACT:
+================================================================================
+
+
+================================================================================
+INTRO (first 5000 chars):
+================================================================================
+
+
+================================================================================
+SECTIONS:
+================================================================================
+LetLSbethesetofallrewardtransformationstthatscale
+
+ERROR: none

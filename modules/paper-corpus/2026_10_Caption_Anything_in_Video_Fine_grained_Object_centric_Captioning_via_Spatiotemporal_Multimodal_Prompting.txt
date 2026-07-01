@@ -1,0 +1,26 @@
+TITLE: Caption Anything in Video: Fine-grained Object-centric Captioning via
+OFFICIAL: Caption Anything in Video: Fine-grained Object-centric Captioning via Spatiotemporal Multimodal Prompting
+YEAR: 2026 | CATEGORY: Best Demonstration | AUTO_TYPE: model-method
+PAGES: 3 | ABSTRACT WORDS: 0
+HAS CONTRIBUTIONS: False | HAS TEASER: False
+ABSTRACT CITATIONS: 0
+
+================================================================================
+ABSTRACT:
+================================================================================
+
+
+================================================================================
+INTRO (first 5000 chars):
+================================================================================
+
+
+================================================================================
+SECTIONS:
+================================================================================
+UniversityofRochester
+SonyGroupCorporation
+CarnegieMellonUniversity
+PurdueUniversity
+
+ERROR: none

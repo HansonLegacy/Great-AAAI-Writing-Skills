@@ -1,0 +1,13 @@
+TITLE: Is My Prediction Arbitrary? The Confounding Effects of Variance in Fair Classification Benchmarks
+YEAR: 2024 | CAT: Honorable Mention Student - AI for Social Impact | TYPE: benchmark-resource
+ABSTRACT WC: 152 | INTRO WC: 160
+
+================================================================================
+ABSTRACT:
+================================================================================
+Variance in predictions across different trained a significant, under-explored source of error classification. In practice, the variance on some is so large that decisions can be effectively investigate this problem, we take an experimental and make four overarching contributions. We: self consistency metric called derived from we use as a proxy for measuring and reducing 2) Develop an ensembling algorithm that classification when a prediction would be Conduct the largest-to-date empirical study (vis-a-vis variance self consistency and binary classification; and, 4) Release a toolkit the US Home Mortgage Disclosure Act easily usable for future research. Altogether, our reveal shocking insights about the reliability on benchmark datasets. Most fair binary close-to-fair marks are when taking into account before of arbitrariness present in predictions — any to apply fairness interventions. This finding question the practical utility of common algorithmic methods, and in turn suggests that we should we choose to measure fairness in binary
+
+================================================================================
+INTRO:
+================================================================================
+A goal of algorithmic fairness is to develop measure and mitigate discrimination in making. In fair binary classification, this fairness training a model to satisfy a chosen typically defines fairness as parity between for different demographic groups in the et al. 2019). However, even if a model’s a particular fairness metric, it is not necessarily the model is equally confident in each To provide an intuition for what we mean consider the following experiment: We fit 100 sion models using the same learning process, different subsamples of the training set from prison recidivism dataset (Larson et al. 2016; 2019), and we compare the resulting *Full, authoritative paper at https ar xiv org abs 2301 11562 Copyright © 2024, Association for the Advancement Intelligence (www.aaai.org). All rights reserved. Lee1,2, Choksi2, Barocas2,3, Katherine Madiha Zahrah Solon Grimmelmann1,2, Kleinberg2, Sen3, Zhang4 Jon Siddhartha Baobao for Generative AI, Law, and Policy Research 2Cornell University 3Microsoft Research 4Syracuse University snoitciderp 100 y=1 y=0 models is

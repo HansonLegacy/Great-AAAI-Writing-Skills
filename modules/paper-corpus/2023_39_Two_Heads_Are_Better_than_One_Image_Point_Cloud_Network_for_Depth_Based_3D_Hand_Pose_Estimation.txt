@@ -1,0 +1,24 @@
+TITLE: Two Heads Are Better than One: Image-Point Cloud Network for Depth-Based 3D
+OFFICIAL: Two Heads are Better than One: Image-Point Cloud Network for Depth-Based 3D Hand Pose Estimation
+YEAR: 2023 | CATEGORY: Distinguished Paper | AUTO_TYPE: model-method
+PAGES: 9 | ABSTRACT WORDS: 0
+HAS CONTRIBUTIONS: False | HAS TEASER: False
+ABSTRACT CITATIONS: 0
+
+================================================================================
+ABSTRACT:
+================================================================================
+
+
+================================================================================
+INTRO (first 5000 chars):
+================================================================================
+
+
+================================================================================
+SECTIONS:
+================================================================================
+D Hand Pose
+D Heatmap
+
+ERROR: none

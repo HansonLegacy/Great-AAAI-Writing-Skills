@@ -1,0 +1,13 @@
+TITLE: Clustering What Matters: Optimal Approximation for Clustering with Outliers
+YEAR: 2023 | CAT: Distinguished Paper | TYPE: model-method
+ABSTRACT WC: 128 | INTRO WC: 0
+
+================================================================================
+ABSTRACT:
+================================================================================
+Clustering with outliers is one of the most X lems in Computer Science. Given a set of k m, two integers and the clustering with outliers m X, clude points from and partition the k into clusters that minimizes a certain cost paper, we give a general approach for solving outliers which results in a fixed parameter tractable FP T al k m gorithm in and (i.e., an algorithm with nO(1) f(k,m) · the form for some function matches the approximation ratio for its outlier-free part. As a corollary we obtain FP T approximation algorithms with k-MEDIAN optimal approximation ratios for with outliers in general metrics. We also exhibit cations of our approach to other variants of the impose additional constraints on the clustering, ness or matroid constraints.
+
+================================================================================
+INTRO:
+================================================================================
+

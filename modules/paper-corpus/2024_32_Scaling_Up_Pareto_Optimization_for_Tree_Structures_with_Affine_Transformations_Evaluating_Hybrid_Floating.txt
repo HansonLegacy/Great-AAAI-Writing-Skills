@@ -1,0 +1,23 @@
+TITLE: Scaling Up Pareto Optimization for Tree Structures with Affine Transformations:
+OFFICIAL: Scaling Up Pareto Optimization for Tree Structures with Affine Transformations: Evaluating Hybrid Floating Solar-Hydropower Systems in the Amazon
+YEAR: 2024 | CATEGORY: Best Student Paper - AI for Social Impact | AUTO_TYPE: model-method
+PAGES: 9 | ABSTRACT WORDS: 0
+HAS CONTRIBUTIONS: False | HAS TEASER: False
+ABSTRACT CITATIONS: 0
+
+================================================================================
+ABSTRACT:
+================================================================================
+
+
+================================================================================
+INTRO (first 5000 chars):
+================================================================================
+
+
+================================================================================
+SECTIONS:
+================================================================================
+
+
+ERROR: none

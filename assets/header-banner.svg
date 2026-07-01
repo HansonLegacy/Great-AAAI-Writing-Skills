@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1774 887" width="100%" height="100%">
+  <defs>
+    <!-- 背景渐变 -->
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a5276"/>
+      <stop offset="100%" style="stop-color:#0d3b56"/>
+    </linearGradient>
+
+    <!-- 网格图案 -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+    </pattern>
+
+    <!-- Logo 发光（可选） -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="1774" height="887" fill="url(#bg)"/>
+  <rect width="1774" height="887" fill="url(#grid)"/>
+
+  <!-- ====== 左侧：Logo 区域 ====== -->
+  <g transform="translate(355, 443.5)">
+    <!-- 在这里放置用户的 Logo。
+         如果 Logo.png 需要嵌入，改为：
+         <image href="Logo.png" x="-170" y="-170" width="340" height="340"/>
+         暂时用几何图形替代 -->
+
+    <!-- 临时几何 Logo（菱形节点图） -->
+    <!-- 中心菱形 -->
+    <polygon points="0,-40 30,0 0,40 -30,0" fill="#c8963e" opacity="0.95"/>
+    <!-- 左上菱形 -->
+    <polygon points="-120,-100 -100,-120 -80,-100 -100,-80" fill="none" stroke="#c8963e" stroke-width="2" opacity="0.8"/>
+    <!-- 右上菱形 -->
+    <polygon points="120,-100 140,-120 160,-100 140,-80" fill="none" stroke="#c8963e" stroke-width="2" opacity="0.8"/>
+    <!-- 下菱形 -->
+    <polygon points="0,160 -20,140 0,120 20,140" fill="none" stroke="#c8963e" stroke-width="2" opacity="0.8"/>
+    <!-- 连接线 -->
+    <line x1="0" y1="-40" x2="-100" y2="-100" stroke="#c8963e" stroke-width="1.5" opacity="0.5"/>
+    <line x1="0" y1="-40" x2="100" y2="-100" stroke="#c8963e" stroke-width="1.5" opacity="0.5"/>
+    <line x1="0" y1="40" x2="0" y2="120" stroke="#c8963e" stroke-width="1.5" opacity="0.5"/>
+  </g>
+
+  <!-- 金色分隔线 -->
+  <line x1="710" y1="177" x2="710" y2="710" stroke="#c8963e" stroke-width="2" opacity="0.5"/>
+
+  <!-- ====== 右侧：文字区域 ====== -->
+  <g transform="translate(758, 320)">
+    <!-- 标题 -->
+    <text x="0" y="0" font-family="Segoe UI, -apple-system, Helvetica, Arial, sans-serif" font-size="56" font-weight="700" letter-spacing="-0.5" fill="#ffffff">
+      AAAI <tspan fill="#c8963e">Writing</tspan> Skill
+    </text>
+
+    <!-- 副标题 -->
+    <text x="0" y="52" font-family="Segoe UI, -apple-system, Helvetica, Arial, sans-serif" font-size="22" font-weight="400" fill="rgba(255,255,255,0.78)" letter-spacing="0.2">
+      AI-powered structured writing system
+    </text>
+    <text x="0" y="84" font-family="Segoe UI, -apple-system, Helvetica, Arial, sans-serif" font-size="22" font-weight="400" fill="rgba(255,255,255,0.78)" letter-spacing="0.2">
+      for AAAI 2027 conference papers
+    </text>
+
+    <!-- 底部金色短横线 -->
+    <rect x="0" y="118" width="64" height="3" rx="1.5" fill="#c8963e" opacity="0.8"/>
+
+    <!-- Feature 列表 -->
+    <g transform="translate(0, 170)">
+      <!-- Feature 1 -->
+      <text x="0" y="0" font-family="Segoe UI, -apple-system, Helvetica, Arial, sans-serif" font-size="18" font-weight="600" fill="#c8963e">◆</text>
+      <text x="28" y="0" font-family="Segoe UI, -apple-system, Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#ffffff">50</text>
+      <text x="54" y="0" font-family="Segoe UI, -apple-system, Helvetica, Arial, sans-serif" font-size="18" font-weight="400" fill="rgba(255,255,255,0.82)"> award-winning papers distilled</text>
+
+      <!-- Feature 2 -->
+      <text x="0" y="36" font-family="Segoe UI, -apple-system, Helvetica, Arial, sans-serif" font-size="18" font-weight="600" fill="#c8963e">◆</text>
+      <text x="28" y="36" font-family="Segoe UI, -apple-system, Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#ffffff">5-phase</text>
+      <text x="100" y="36" font-family="Segoe UI, -apple-system, Helvetica, Arial, sans-serif" font-size="18" font-weight="400" fill="rgba(255,255,255,0.82)"> orchestrated workflow</text>
+
+      <!-- Feature 3 -->
+      <text x="0" y="72" font-family="Segoe UI, -apple-system, Helvetica, Arial, sans-serif" font-size="18" font-weight="600" fill="#c8963e">◆</text>
+      <text x="28" y="72" font-family="Segoe UI, -apple-system, Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#ffffff">4</text>
+      <text x="40" y="72" font-family="Segoe UI, -apple-system, Helvetica, Arial, sans-serif" font-size="18" font-weight="400" fill="rgba(255,255,255,0.82)"> paper-type specializations</text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,23 @@
+TITLE: GxVAEs: Two Joint VAEs Generate Hit Molecules from Gene Expression Profiles
+OFFICIAL: GxVAEs: Two Joint VAEs Generate Hit Molecules from Gene Expression Profiles
+YEAR: 2024 | CATEGORY: Outstanding Paper | AUTO_TYPE: model-method
+PAGES: 9 | ABSTRACT WORDS: 0
+HAS CONTRIBUTIONS: False | HAS TEASER: True
+ABSTRACT CITATIONS: 0
+
+================================================================================
+ABSTRACT:
+================================================================================
+
+
+================================================================================
+INTRO (first 5000 chars):
+================================================================================
+
+
+================================================================================
+SECTIONS:
+================================================================================
+
+
+ERROR: none

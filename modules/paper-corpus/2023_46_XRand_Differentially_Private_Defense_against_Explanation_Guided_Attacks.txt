@@ -1,0 +1,23 @@
+TITLE: XRAND: Differentially Private Defense against Explanation-Guided Attacks
+OFFICIAL: XRand: Differentially Private Defense against Explanation-Guided Attacks
+YEAR: 2023 | CATEGORY: Distinguished Paper | AUTO_TYPE: model-method
+PAGES: 9 | ABSTRACT WORDS: 0
+HAS CONTRIBUTIONS: False | HAS TEASER: True
+ABSTRACT CITATIONS: 0
+
+================================================================================
+ABSTRACT:
+================================================================================
+
+
+================================================================================
+INTRO (first 5000 chars):
+================================================================================
+
+
+================================================================================
+SECTIONS:
+================================================================================
+Thisthreatmodelpromotesadefenseunderworst-casesce-
+
+ERROR: none

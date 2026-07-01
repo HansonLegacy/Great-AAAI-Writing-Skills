@@ -1,0 +1,13 @@
+TITLE: Strategic Recommendation: Revenue Optimal Matching for Online Platforms
+YEAR: 2024 | CAT: Student Abstract Program Award | TYPE: model-method
+ABSTRACT WC: 106 | INTRO WC: 216
+
+================================================================================
+ABSTRACT:
+================================================================================
+two-sided market We consider a platform in a supply unit-demand sellers and buyers. Each act with a subset of sellers it knows off platform seller that the platform recommends Given the choice of sell competitive ers, transactions and prices form a The platform selects one seller for each buyer, fixed percentage of the prices of all transactions ommends. The platform seeks to maximize total We show that the platform s problem is NP hard even when each buyer knows at most two buyers off when each buyer values all sellers equally and one buyer off platform, we provide a polynomial rithm that optimally solves the problem.
+
+================================================================================
+INTRO:
+================================================================================
+In 2019, Amazon was sued in Europe for ers over others at the expense of consumers. to have used the “Buy Box”, a key feature at the product page, to draw buyers to Amazon’s or third party sellers who pay hefty delivery to Amazon, obscuring better deals elsewhere 2022). For a platform it is hard to decide how to recommend sell ers to buyers. Recommending a high price risks losing the trade to a competitor off ommending a low price product forgoes a commission fee. In this paper, we model form, and characterize the computational the platform solves for a revenue optimal We formulate the problem in a two-sided by a bipartite graph Buyers and sellers side of the graph, and edges indicate transaction ties between buyers and sellers off platform. adds at most one more edge for each buyer market clears according to a competitive ject to transaction constraints represented by platform’s revenue is proportional to the total actions through the edges it adds. We show form’s problem of selecting which set of computationally hard. Copyright © 2024, Association for the Advancement Intelligence (www.aaai.org). All rights reserved. ∗Equal contribution. Ma*, Gary Qiurui David C. Parkes Harvard University, 29 Oxford Street, Cambridge, USA qi u rui ma g harvard edu (806-543-3462), parkes eec s harvard edu

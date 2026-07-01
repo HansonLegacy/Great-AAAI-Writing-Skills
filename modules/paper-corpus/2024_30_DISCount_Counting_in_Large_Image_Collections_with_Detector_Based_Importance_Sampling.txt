@@ -1,0 +1,26 @@
+TITLE: DISCOUNT: Counting in Large Image Collections with Detector-Based
+OFFICIAL: DISCount: Counting in Large Image Collections with Detector-Based Importance Sampling
+YEAR: 2024 | CATEGORY: Best Paper - AI for Social Impact | AUTO_TYPE: model-method
+PAGES: 9 | ABSTRACT WORDS: 0
+HAS CONTRIBUTIONS: False | HAS TEASER: False
+ABSTRACT CITATIONS: 0
+
+================================================================================
+ABSTRACT:
+================================================================================
+
+
+================================================================================
+INTRO (first 5000 chars):
+================================================================================
+
+
+================================================================================
+SECTIONS:
+================================================================================
+RelatedWork
+Xf
+ExperimentalSetup
+keydifferenceisthatk-DISCOUNTdrawssamplesfromall
+
+ERROR: none

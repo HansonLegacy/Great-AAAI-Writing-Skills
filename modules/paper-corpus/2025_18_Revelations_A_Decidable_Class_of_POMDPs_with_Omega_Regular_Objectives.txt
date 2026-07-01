@@ -1,0 +1,24 @@
+TITLE: Revelations: A Decidable Class of POMDPs with Omega-Regular Objectives
+OFFICIAL: Revelations: A Decidable Class of POMDPs with Omega-Regular Objectives
+YEAR: 2025 | CATEGORY: Outstanding Paper | AUTO_TYPE: model-method
+PAGES: 9 | ABSTRACT WORDS: 0
+HAS CONTRIBUTIONS: False | HAS TEASER: False
+ABSTRACT CITATIONS: 0
+
+================================================================================
+ABSTRACT:
+================================================================================
+
+
+================================================================================
+INTRO (first 5000 chars):
+================================================================================
+
+
+================================================================================
+SECTIONS:
+================================================================================
+Preliminaries
+WeaklyRevealingPOMDPs maximal priority of the belief support is the one that mat-
+
+ERROR: none

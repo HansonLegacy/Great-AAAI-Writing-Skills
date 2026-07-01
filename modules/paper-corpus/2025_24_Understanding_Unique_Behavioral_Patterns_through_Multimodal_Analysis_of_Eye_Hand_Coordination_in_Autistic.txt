@@ -1,0 +1,26 @@
+TITLE: Understanding Unique Behavioral Patterns through Multimodal Analysis of
+OFFICIAL: Understanding Unique Behavioral Patterns through Multimodal Analysis of Eye-Hand Coordination in Autistic Children
+YEAR: 2025 | CATEGORY: Outstanding Student Paper | AUTO_TYPE: model-method
+PAGES: 3 | ABSTRACT WORDS: 0
+HAS CONTRIBUTIONS: False | HAS TEASER: True
+ABSTRACT CITATIONS: 0
+
+================================================================================
+ABSTRACT:
+================================================================================
+
+
+================================================================================
+INTRO (first 5000 chars):
+================================================================================
+
+
+================================================================================
+SECTIONS:
+================================================================================
+MT F R
+ExperimentalResults
+Conclusion
+Acknowledgments
+
+ERROR: none

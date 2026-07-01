@@ -1,0 +1,13 @@
+TITLE: BindGPT: A Scalable Framework for 3D Molecular Design via Language Modeling and Reinforcement Learning
+YEAR: 2025 | CAT: Best Poster | TYPE: application-driven
+ABSTRACT WC: 160 | INTRO WC: 107
+
+================================================================================
+ABSTRACT:
+================================================================================
+Generating novel active molecules for a given extremely challenging task for generative models an understanding of the complex physical interactions between the molecule and its environment. This paper generative model, BindGPT, which uses a ple but powerful approach to create 3D molecules protein’s binding site. Our model produces and conformations jointly, eliminating the need graph reconstruction step. We pre-train BindGPT scale data set and fine tune it with reinforcement learning using scores from external simulation software We demonstrate how a single pre-trained language model can serve at as a 3D molecular generative model, a conformer conditioned on the molecular graph, and a 3D molecule generator. Notably, the model any representational equivariance assumptions main of generation. We show how such a simple approach combined with pre-training and scaling on par or better than the current best specialized models, language models, and graph neural being two orders of magnitude cheaper to sample. Website — https bind gp t g it hub io
+
+================================================================================
+INTRO:
+================================================================================
+The drug discovery landscape presents immense and risks, demanding substantial investments resources to design, test, and deliver new market. Within this context, Computer-Aided CADD Yu and MacKerel l 2017 stands as a pivotal method ology, harnessing software screenings and tions to facilitate a more efficient exploration space of drug-like molecules, estimated to in size (Polishchuk, Madzhidov, and Varnek learning advancements have revolutionized by leveraging neural generative models trained compound datasets. Notably, the textual *Correspondence to: r schu t ski in sil ico medicine com Copyright © 2025, Association for the Advancement Intelligence (www.aaai.org). All rights reserved. Kuznetsov1, Schutski2, Shayakhmetov1, Roman Rim Daniil Chandar3,4,5,6 Zhavoronkov2 Sarath and Alex

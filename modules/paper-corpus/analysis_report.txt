@@ -1,0 +1,111 @@
+Papers with valid abstracts: 45/50
+
+================================================================================
+1. OPENING SENTENCE PATTERNS
+================================================================================
+
+  [other] — 38 papers (84.4%)
+    Example: "and(I 2 ,d)with{d,e}??I 1=?I 2: Weconsidertheproblemofmodifyingadescriptionlogiccon- I ? d?MammalI 1 I ? d?MammalI 2 1 2 ceptinlightofmodelsrepresente..."
+
+  [definitional-is-a] — 3 papers (6.7%)
+    Example: "Dense Caption CLIP is a seminal multimodal model that maps images ?The image depicts a pie chart under and text into a shared representation space by ..."
+
+  [we-propose-first] — 1 papers (2.2%)
+    Example: "Contributions. We propose CAT-V (Caption AnyThing in Video), a training-free framework for object-centric video In this work, we introduce CAT-V (Capt..."
+
+  [concessive-while] — 1 papers (2.2%)
+    Example: "Multi-agent reinforcement learning (MARL) is a powerful paradigm for solving cooperative and competitive decision- Goal making problems. While many MA..."
+
+  [narrative-hook] — 1 papers (2.2%)
+    Example: "with probability 1. We consider the class of omega-regular objectives (all expressible as parity objectives), which is a Partially observable Markov d..."
+
+  [field-status] — 1 papers (2.2%)
+    Example: "Introduction Monitoring biodiversity is vital for understanding the state Large-scale, volunteer-collected datasets of community- of the natural world..."
+
+================================================================================
+2. METHOD NAME / TITLE PATTERNS
+================================================================================
+  [NAME: Subtitle] — 29 papers (58%)
+  [Other] — 14 papers (28%)
+  [Gerund Phrase] — 6 papers (12%)
+  [Question-Based] — 1 papers (2%)
+
+================================================================================
+3. STRUCTURAL FEATURES
+================================================================================
+  Explicit contributions list: 0/15
+  Teaser Fig. 1 mention: 1
+
+================================================================================
+4. TRANSITION WORD FREQUENCY IN ABSTRACTS
+================================================================================
+  'however': 17/45 papers (38%)
+  'we introduce': 9/45 papers (20%)
+  'we propose': 8/45 papers (18%)
+  'state-of-the-art': 6/45 papers (13%)
+  'moreover': 5/45 papers (11%)
+  'furthermore': 5/45 papers (11%)
+  'we present': 4/45 papers (9%)
+  'specifically': 4/45 papers (9%)
+  'in contrast': 2/45 papers (4%)
+  'notably': 2/45 papers (4%)
+  'we develop': 2/45 papers (4%)
+  'extensive experiments': 1/45 papers (2%)
+  'to address this': 1/45 papers (2%)
+
+================================================================================
+5. ABSTRACT 5-STEP ARC COMPLETENESS
+================================================================================
+  0/5 arc elements: 7 papers (16%)
+  1/5 arc elements: 12 papers (27%)
+  2/5 arc elements: 15 papers (33%)
+  3/5 arc elements: 8 papers (18%)
+  4/5 arc elements: 3 papers (7%)
+  5/5 arc elements: 0 papers (0%)
+
+================================================================================
+6. PAPER TYPE DISTRIBUTION (WITH EXAMPLES)
+================================================================================
+
+  [theory] — 2 papers
+    • Revelations: A Decidable Class of POMDPs with Omega-Regular Objectives
+    • Clustering What Matters: Optimal Approximation for Clustering with Outliers
+
+  [model-method] — 37 papers
+    • Model Change for Description Logic Concepts
+    • Causal Structure Learning for Dynamical Systems with Theoretical Score Analysis
+    • ReconVLA: Reconstructive Vision-Language-Action Model as Effective Robot Perceiv
+    • High-Pass Matters: Theoretical Insights and Sheaflet-Based Design for Hypergraph
+    • LLM2CLIP: Powerful Language Model Unlocks Richer Cross-Modality Representation
+
+  [benchmark-resource] — 5 papers
+    • DivShift: Exploring Domain-Specific Distribution Shifts in Large-Scale, Voluntee
+    • Is My Prediction Arbitrary? The Confounding Effects of Variance in Fair Classifi
+    • Neural Architecture Search for Wide Spectrum Adversarial Robustness
+    • DICNet: Deep Instance-Level Contrastive Network for Double Incomplete Multi-View
+    • Decorate the Newcomers: Visual Domain Prompt for Continual Test Time Adaptation
+
+  [application-driven] — 6 papers
+    • Generalizable Slum Detection from Satellite Imagery with Mixture-of-Experts
+    • BindGPT: A Scalable Framework for 3D Molecular Design via Language Modeling and 
+    • Understanding Unique Behavioral Patterns through Multimodal Analysis of Eye-Hand
+    • GxVAEs: Two Joint VAEs Generate Hit Molecules from Gene Expression Profiles
+    • Scaling Up Pareto Optimization for Tree Structures with Affine Transformations: 
+
+================================================================================
+7. MEMORY HOOK EXAMPLES (from abstracts)
+================================================================================
+
+  [striking_number]: 0 papers
+
+  [counter_intuitive]: 0 papers
+
+  [minimalist]: 1 papers
+    • CowClip: Reducing CTR Prediction Model Training Time from 12: "single V100 GPU. Our code"
+
+  [dash_emphasis]: 3 papers
+    • Causal Structure Learning for Dynamical Systems with Theoret: "—leading to poor per- formance on irregularly sampled data—"
+    • LLM2CLIP: Powerful Language Model Unlocks Richer Cross-Modal: "—withoutlarge-scaleretraining—"
+    • Multi-Modal Hand-to-Mouth Gesture Recognition in Activity-Or: "—eitherRGBorthermal—"
+
+Done!

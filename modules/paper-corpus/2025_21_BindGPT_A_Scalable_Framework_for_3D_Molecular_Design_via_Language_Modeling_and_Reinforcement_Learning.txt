@@ -1,0 +1,33 @@
+TITLE: BindGPT: A Scalable Framework for 3D Molecular Design via Language Modeling
+OFFICIAL: BindGPT: A Scalable Framework for 3D Molecular Design via Language Modeling and Reinforcement Learning
+YEAR: 2025 | CATEGORY: Best Poster | AUTO_TYPE: model-method
+PAGES: 9 | ABSTRACT WORDS: 0
+HAS CONTRIBUTIONS: False | HAS TEASER: False
+ABSTRACT CITATIONS: 0
+
+================================================================================
+ABSTRACT:
+================================================================================
+
+
+================================================================================
+INTRO (first 5000 chars):
+================================================================================
+
+
+================================================================================
+SECTIONS:
+================================================================================
+InsilicoMedicineAILimited
+ChandarResearchLab
+CIFARAIChair
+Introduction
+sionrequiredforatomplacementmeansthatminorpositional
+Thedrugdiscoverylandscapepresentsimmensechallenges adjustmentscansignificantlyalterreconstructedmolecular
+Mpocket-ligands
+Mparameters
+D molecular structures both zero-shot and after fine-
+Background
+Dligand tokens tokens
+
+ERROR: none

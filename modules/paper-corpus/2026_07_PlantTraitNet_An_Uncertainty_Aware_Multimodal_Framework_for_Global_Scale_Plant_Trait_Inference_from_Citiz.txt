@@ -1,0 +1,23 @@
+TITLE: PlantTraitNet: An Uncertainty-Aware Multimodal Framework for Global-Scale
+OFFICIAL: PlantTraitNet: An Uncertainty-Aware Multimodal Framework for Global-Scale Plant Trait Inference from Citizen Science Data
+YEAR: 2026 | CATEGORY: Best Paper - AI for Social Impact | AUTO_TYPE: model-method
+PAGES: 10 | ABSTRACT WORDS: 0
+HAS CONTRIBUTIONS: False | HAS TEASER: False
+ABSTRACT CITATIONS: 0
+
+================================================================================
+ABSTRACT:
+================================================================================
+
+
+================================================================================
+INTRO (first 5000 chars):
+================================================================================
+
+
+================================================================================
+SECTIONS:
+================================================================================
+
+
+ERROR: none

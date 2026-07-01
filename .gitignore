@@ -1,0 +1,63 @@
+# macOS
+.DS_Store
+.AppleDouble
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# IDE & Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.settings/
+*.sublime-workspace
+*.sublime-project
+
+# LaTeX auxiliary files
+*.aux
+*.log
+*.out
+*.toc
+*.bbl
+*.blg
+*.synctex.gz
+*.fdb_latexmk
+*.fls
+*.xdv
+*.nav
+*.snm
+*.vrb
+*.run.xml
+*.bcf
+*.lot
+*.lof
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+*.egg-info/
+dist/
+build/
+
+# Temp & Backup
+*.tmp
+*.bak
+*~
+*.orig
+*.rej
+
+# OS generated files
+Thumbs.db
+.DS_Store

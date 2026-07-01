@@ -1,0 +1,31 @@
+# Markdownlint configuration
+# https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md
+
+default: true
+
+# Allow inline HTML (useful for <details> folding and badges)
+MD033: false
+
+# Allow bare URLs (useful in documentation)
+MD034: false
+
+# Line length — allow longer lines for tables and link-heavy sections
+MD013:
+  line_length: 200
+  heading_line_length: 120
+  code_block_line_length: 200
+  tables: false
+  headings: false
+
+# Allow duplicate headings (each section file may have its own "## 一、..." structure)
+MD024:
+  siblings_only: true
+
+# Allow files that don't start with a top-level heading (SKILL.md starts with YAML frontmatter)
+MD041: false
+
+# Allow emphasis as heading markers
+MD036: false
+
+# Allow punctuation in headings
+MD026: false

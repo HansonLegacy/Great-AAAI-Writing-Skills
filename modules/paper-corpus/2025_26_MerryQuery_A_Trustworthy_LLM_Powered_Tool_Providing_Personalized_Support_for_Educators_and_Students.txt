@@ -1,0 +1,27 @@
+TITLE: MerryQuery: A Trustworthy LLM-Powered Tool Providing Personalized Support
+OFFICIAL: MerryQuery: A Trustworthy LLM-Powered Tool Providing Personalized Support for Educators and Students
+YEAR: 2025 | CATEGORY: Demonstration Award | AUTO_TYPE: model-method
+PAGES: 3 | ABSTRACT WORDS: 0
+HAS CONTRIBUTIONS: False | HAS TEASER: False
+ABSTRACT CITATIONS: 0
+
+================================================================================
+ABSTRACT:
+================================================================================
+
+
+================================================================================
+INTRO (first 5000 chars):
+================================================================================
+
+
+================================================================================
+SECTIONS:
+================================================================================
+NorthCarolinaStateUniversity
+NorthwesternUniversity
+Acknowledgments
+WewouldliketoacknowledgethecontributionsofHomak
+TheDesignandapplicationofRAG-basedconversa-
+
+ERROR: none

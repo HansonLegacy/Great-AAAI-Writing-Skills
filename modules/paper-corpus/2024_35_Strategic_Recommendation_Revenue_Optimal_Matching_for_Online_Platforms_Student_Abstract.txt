@@ -1,0 +1,23 @@
+TITLE: Strategic Recommendation: Revenue Optimal Matching for Online Platforms
+OFFICIAL: Strategic Recommendation: Revenue Optimal Matching for Online Platforms
+YEAR: 2024 | CATEGORY: Student Abstract Program Award | AUTO_TYPE: model-method
+PAGES: 3 | ABSTRACT WORDS: 0
+HAS CONTRIBUTIONS: False | HAS TEASER: True
+ABSTRACT CITATIONS: 0
+
+================================================================================
+ABSTRACT:
+================================================================================
+
+
+================================================================================
+INTRO (first 5000 chars):
+================================================================================
+
+
+================================================================================
+SECTIONS:
+================================================================================
+
+
+ERROR: none

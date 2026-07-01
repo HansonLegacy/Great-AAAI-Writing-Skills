@@ -1,0 +1,23 @@
+TITLE: JoLT: Jointly Learned Representations of Language and Time-Series for Clinical
+OFFICIAL: JoLT: Jointly Learned Representations of Language and Time-Series for Clinical Time-series Interpretation
+YEAR: 2024 | CATEGORY: Student Abstract Program Award | AUTO_TYPE: model-method
+PAGES: 2 | ABSTRACT WORDS: 0
+HAS CONTRIBUTIONS: False | HAS TEASER: True
+ABSTRACT CITATIONS: 0
+
+================================================================================
+ABSTRACT:
+================================================================================
+
+
+================================================================================
+INTRO (first 5000 chars):
+================================================================================
+
+
+================================================================================
+SECTIONS:
+================================================================================
+
+
+ERROR: none

@@ -1,0 +1,23 @@
+TITLE: Cumulant Attention in Vision Transformers (Student Abstract)
+OFFICIAL: Cumulant Attention in Vision Transformers
+YEAR: 2026 | CATEGORY: Student Abstract Program Award | AUTO_TYPE: model-method
+PAGES: 3 | ABSTRACT WORDS: 0
+HAS CONTRIBUTIONS: False | HAS TEASER: False
+ABSTRACT CITATIONS: 0
+
+================================================================================
+ABSTRACT:
+================================================================================
+
+
+================================================================================
+INTRO (first 5000 chars):
+================================================================================
+
+
+================================================================================
+SECTIONS:
+================================================================================
+
+
+ERROR: none

@@ -1,0 +1,25 @@
+TITLE: Every Bit Helps: Achieving the Optimal Distortion with a Few Queries
+OFFICIAL: Every Bit Helps: Achieving the Optimal Distortion with a Few Queries
+YEAR: 2025 | CATEGORY: Outstanding Paper | AUTO_TYPE: model-method
+PAGES: 8 | ABSTRACT WORDS: 0
+HAS CONTRIBUTIONS: False | HAS TEASER: False
+ABSTRACT CITATIONS: 0
+
+================================================================================
+ABSTRACT:
+================================================================================
+
+
+================================================================================
+INTRO (first 5000 chars):
+================================================================================
+
+
+================================================================================
+SECTIONS:
+================================================================================
+Introduction p
+Model
+imouslypreferssomecandidatecoverallcommitteemem-
+
+ERROR: none

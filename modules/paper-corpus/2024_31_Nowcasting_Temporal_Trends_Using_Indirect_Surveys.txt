@@ -1,0 +1,25 @@
+TITLE: Nowcasting Temporal Trends Using Indirect Surveys
+OFFICIAL: Nowcasting Temporal Trends Using Indirect Surveys
+YEAR: 2024 | CATEGORY: Honorable Mention - AI for Social Impact | AUTO_TYPE: model-method
+PAGES: 9 | ABSTRACT WORDS: 0
+HAS CONTRIBUTIONS: False | HAS TEASER: False
+ABSTRACT CITATIONS: 0
+
+================================================================================
+ABSTRACT:
+================================================================================
+
+
+================================================================================
+INTRO (first 5000 chars):
+================================================================================
+
+
+================================================================================
+SECTIONS:
+================================================================================
+Introduction
+Methodology
+NSUM assumes that the proportion of those belonging to
+
+ERROR: none

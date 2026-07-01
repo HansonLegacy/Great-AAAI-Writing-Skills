@@ -1,0 +1,25 @@
+TITLE: DropMessage: Unifying Random Dropping for Graph Neural Networks
+OFFICIAL: DropMessage: Unifying Random Dropping for Graph Neural Networks
+YEAR: 2023 | CATEGORY: Distinguished Paper | AUTO_TYPE: model-method
+PAGES: 9 | ABSTRACT WORDS: 0
+HAS CONTRIBUTIONS: False | HAS TEASER: False
+ABSTRACT CITATIONS: 0
+
+================================================================================
+ABSTRACT:
+================================================================================
+
+
+================================================================================
+INTRO (first 5000 chars):
+================================================================================
+
+
+================================================================================
+SECTIONS:
+================================================================================
+ZhejiangUniversity
+FinVolutionGroup
+FudanUniversity
+
+ERROR: none

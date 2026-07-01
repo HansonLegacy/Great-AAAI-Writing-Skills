@@ -1,0 +1,18 @@
+name: Stale Issue Management
+
+on:
+  schedule:
+    - cron: '23 9 * * 1'  # weekly on Monday
+
+jobs:
+  stale:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/stale@v9
+        with:
+          stale-issue-message: 'This issue has been automatically marked as stale due to 90 days of inactivity. It will be closed in 7 days if no further activity occurs.'
+          close-issue-message: 'This issue has been closed due to inactivity. Feel free to reopen if still relevant.'
+          days-before-stale: 90
+          days-before-close: 7
+          exempt-issue-labels: 'pinned,security,roadmap'
+          stale-issue-label: 'stale'

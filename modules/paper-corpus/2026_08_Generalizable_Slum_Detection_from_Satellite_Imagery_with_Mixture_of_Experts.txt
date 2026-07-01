@@ -1,0 +1,23 @@
+TITLE: Generalizable Slum Detection from Satellite Imagery with Mixture-of-Experts
+OFFICIAL: Generalizable Slum Detection from Satellite Imagery with Mixture-of-Experts
+YEAR: 2026 | CATEGORY: Best Paper - AI for Social Impact | AUTO_TYPE: application-driven
+PAGES: 9 | ABSTRACT WORDS: 0
+HAS CONTRIBUTIONS: False | HAS TEASER: False
+ABSTRACT CITATIONS: 0
+
+================================================================================
+ABSTRACT:
+================================================================================
+
+
+================================================================================
+INTRO (first 5000 chars):
+================================================================================
+
+
+================================================================================
+SECTIONS:
+================================================================================
+
+
+ERROR: none

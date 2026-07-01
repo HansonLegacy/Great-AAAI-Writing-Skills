@@ -1,0 +1,27 @@
+TITLE: LLM2CLIP: Powerful Language Model Unlocks Richer Cross-Modality
+OFFICIAL: LLM2CLIP: Powerful Language Model Unlocks Richer Cross-Modality Representation
+YEAR: 2026 | CATEGORY: Outstanding Paper | AUTO_TYPE: model-method
+PAGES: 9 | ABSTRACT WORDS: 0
+HAS CONTRIBUTIONS: False | HAS TEASER: True
+ABSTRACT CITATIONS: 0
+
+================================================================================
+ABSTRACT:
+================================================================================
+
+
+================================================================================
+INTRO (first 5000 chars):
+================================================================================
+
+
+================================================================================
+SECTIONS:
+================================================================================
+MicrosoftCorporation
+Introduction
+RelatedWorks
+AnotherkeychallengewhenintroducingLLMsintoCLIP
+Methods positive pairsusing twodistinct captionsfrom the same
+
+ERROR: none

@@ -1,0 +1,23 @@
+TITLE: TianciLiu,HaoyuWang,YaqingWang,XiaoqianWang,LuSu,JingGao*
+OFFICIAL: SimFair: A Unified Framework for Fairness-Aware Multi-Label Classification
+YEAR: 2023 | CATEGORY: Distinguished Paper | AUTO_TYPE: model-method
+PAGES: 9 | ABSTRACT WORDS: 0
+HAS CONTRIBUTIONS: False | HAS TEASER: False
+ABSTRACT CITATIONS: 0
+
+================================================================================
+ABSTRACT:
+================================================================================
+
+
+================================================================================
+INTRO (first 5000 chars):
+================================================================================
+
+
+================================================================================
+SECTIONS:
+================================================================================
+
+
+ERROR: none

@@ -1,0 +1,13 @@
+TITLE: CowClip: Reducing CTR Prediction Model Training Time from 12 hours to 10 minutes on 1 GPU
+YEAR: 2023 | CAT: Distinguished Paper | TYPE: model-method
+ABSTRACT WC: 204 | INTRO WC: 108
+
+================================================================================
+ABSTRACT:
+================================================================================
+The click-through rate (CTR) prediction task whether a user will click on the recommended item As mind boggling amounts of data are produced online ating CTR prediction model training is critical an up-to-date model and reducing the training proach to increase the training speed is to apply training. However, as shown in computer vision language processing tasks, training with a ily suffers from the loss of accuracy. Our that previous scaling rules fail in the training of tion neural networks. To tackle this problem, retically show that different frequencies of ids leng ing to scale hyper parameters when scaling the batch size To stabilize the training process in a large batch we develop the adaptive Column-wise Clipping It enables an easy and effective scaling rule dings, which keeps the learning rate unchanged the L 2 loss We conduct extensive experiments with fourC TR prediction networks on two real-world datasets fully scaled 128 times the original batch size racy loss. In particular, for CTR prediction training on the Criteo dataset, our optimization enlarges the batch size from 1K to 128K AUC improvement and reduces training time to 10 minutes on a single V100 GPU. Our g it hub com byte dance Large Batch C TR
+
+================================================================================
+INTRO:
+================================================================================
+With the development of the Internet and numerous clicking happens in online shopping 2020; Zhou et al. 2019), video apps (Gomez-Uribe 2016; Xie et al. 2020) and web advertisements Adams, and Sargin 2016; Zhao et al. 2019). Rate (CTR) prediction is to predict whether a on the recommended item. It is a fundamental *Work done during an internship at Bytedance. †Yang You is the corresponding author. Copyright © 2023, Association for the Advancement Intelligence (www.aaai.org). All rights reserved. Xu1∗, Zou2, Tang2, Li2 Pengtai Xuan Da Zhen , Wu2, Zou2, Zhu2, Chen2, Peng Leqi Yijie Ming Xue1, Qin1, Cheng2, You1† Ziheng Youlong Yang Computer Science, National University of Singapore

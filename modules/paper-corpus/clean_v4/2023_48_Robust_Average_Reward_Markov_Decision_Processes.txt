@@ -1,0 +1,13 @@
+TITLE: Robust Average-Reward Markov Decision Processes
+YEAR: 2023 | CAT: Distinguished Paper | TYPE: model-method
+ABSTRACT WC: 157 | INTRO WC: 152
+
+================================================================================
+ABSTRACT:
+================================================================================
+In robustMarkov decision processes (MDPs), in the transition kernel is addressed by finding optimizes the worst-case performance over an of MDPs. While much of the literature has counted MDPs, robust average-reward MDPs unexplored. In this paper, we focus on robust MDPs, where the goal is to find a policy that worst-case average reward over an uncertainty take an approach that approximates average-reward using discounted MDPs. We prove that the robust value function converges to the robust average-reward discount factor goes to 1, and moreover when optimal policy of the robust discounted MDP timal policy of the robust average-reward. We a robust dynamic programming approach, and characterize its convergence to the optimum. vestigate robust average-reward MDPs directly ing discounted MDPs as an intermediate step. robust Bellman equation for robust average-reward prove that the optimal policy can be derived from its solution and further design a robust relative value iteration that provably finds its solution, or equivalently, robust policy.
+
+================================================================================
+INTRO:
+================================================================================
+A Markov decision process M DP is an effective ma them at ical tool for sequential decision-making in ronments (Derman 1970; Puterman 1994). problem entails finding an optimal policy a cumulative reward according to a given ever, in practice there could exist a mismatch assumed M DP model and the underlying environment due to various factors, such as non station ari ty of the modeling error, exogenous perturbation, ity, and adversarial attacks. The ensuing could result in solution policies with poor This challenge spurred noteworthy efforts and analyzing a framework of robust MDPs Ng, and Schneider 2001; Nilim and El Ghaoui 2005). Rather than adopting a fixed MDP bust MDP setting, one seeks to optimize the formance over an uncertainty set of possible Copyright © 2023, Association for the Advancement Intelligence (www.aaai.org). All rights reserved. Atia3, Prater Bennett e 4 Zou1 George Ashley Shaofeng at Buffalo, The State University of New York

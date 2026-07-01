@@ -1,0 +1,13 @@
+TITLE: Every Bit Helps: Achieving the Optimal Distortion with a Few Queries
+YEAR: 2025 | CAT: Outstanding Paper | TYPE: model-method
+ABSTRACT WC: 151 | INTRO WC: 0
+
+================================================================================
+ABSTRACT:
+================================================================================
+A fundamental task in multi-agent systems n agents to alternatives (e.g., resources or tasks). ten done by eliciting agents’ ordinal rankings ternatives rather than their exact numerical this simplifies elicitation, the incomplete to inefficiency, captured by a worst-case measure tortion. Recent work shows that making just utility queries per agent can significantly improve tion, with Amanatidis et al. (2024) achieving tion with two queries per agent. We generalize O(n1=(cid:21)) (cid:21) achieving distortion with queries (cid:21), any constant which is optimal up to a constant a previous lower bound by Amanatidis et al. We extend this finding to the general social m lem of selecting one of alternatives based O min fn mg 1 cid 21 preferences, achieving (cid:21) (cid:21), queries per agent, for any constant which given prior results. Thus, our work settles open gard ing the optimal distortion achievable with a fixed number of cardinal value queries in both settings.
+
+================================================================================
+INTRO:
+================================================================================
+

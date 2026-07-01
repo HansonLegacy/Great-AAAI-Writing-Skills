@@ -1,0 +1,26 @@
+TITLE: DivShift: Exploring Domain-Specific Distribution Shift in Large-Scale,
+OFFICIAL: DivShift: Exploring Domain-Specific Distribution Shifts in Large-Scale, Volunteer-Collected Biodiversity Datasets
+YEAR: 2025 | CATEGORY: Outstanding Paper - AI for Social Alignment | AUTO_TYPE: model-method
+PAGES: 11 | ABSTRACT WORDS: 0
+HAS CONTRIBUTIONS: False | HAS TEASER: False
+ABSTRACT CITATIONS: 0
+
+================================================================================
+ABSTRACT:
+================================================================================
+
+
+================================================================================
+INTRO (first 5000 chars):
+================================================================================
+
+
+================================================================================
+SECTIONS:
+================================================================================
+StanfordUniversityDepartmentofComputerScience
+CarnegieSciencePlantBiology
+FederalUniversityofMinasGeraisDepartmentofVegetationBiology
+HowardHughesMedicalInstitute
+
+ERROR: none

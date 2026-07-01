@@ -1,0 +1,25 @@
+TITLE: Robust Average-Reward Markov Decision Processes
+OFFICIAL: Robust Average-Reward Markov Decision Processes
+YEAR: 2023 | CATEGORY: Distinguished Paper | AUTO_TYPE: model-method
+PAGES: 9 | ABSTRACT WORDS: 0
+HAS CONTRIBUTIONS: False | HAS TEASER: False
+ABSTRACT CITATIONS: 0
+
+================================================================================
+ABSTRACT:
+================================================================================
+
+
+================================================================================
+INTRO (first 5000 chars):
+================================================================================
+
+
+================================================================================
+SECTIONS:
+================================================================================
+UniversityofColoradoBoulder
+UniversityofCentralFlorida
+AirForceResearchLaboratory
+
+ERROR: none

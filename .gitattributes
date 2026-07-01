@@ -1,0 +1,15 @@
+# Paper corpus data — excluded from language stats and diffs
+modules/paper-corpus/** linguist-generated=true
+modules/paper-corpus/** linguist-documentation=true
+
+# Force LF line endings for all text files
+*.md text eol=lf
+*.txt text eol=lf
+*.json text eol=lf
+*.yaml text eol=lf
+*.yml text eol=lf
+*.tex text eol=lf
+*.bib text eol=lf
+*.bst text eol=lf
+*.cls text eol=lf
+*.sty text eol=lf

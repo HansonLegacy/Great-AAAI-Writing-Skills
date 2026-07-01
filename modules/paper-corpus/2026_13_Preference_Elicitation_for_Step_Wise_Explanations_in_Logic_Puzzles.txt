@@ -1,0 +1,26 @@
+TITLE: Preference Elicitation for Step-Wise Explanations in Logic Puzzles
+OFFICIAL: Preference Elicitation for Step-Wise Explanations in Logic Puzzles
+YEAR: 2026 | CATEGORY: Best Poster | AUTO_TYPE: model-method
+PAGES: 9 | ABSTRACT WORDS: 0
+HAS CONTRIBUTIONS: False | HAS TEASER: True
+ABSTRACT CITATIONS: 0
+
+================================================================================
+ABSTRACT:
+================================================================================
+
+
+================================================================================
+INTRO (first 5000 chars):
+================================================================================
+
+
+================================================================================
+SECTIONS:
+================================================================================
+Introduction
+We investigate the feasibility of this approach for step-
+Features Left Right
+Background
+
+ERROR: none

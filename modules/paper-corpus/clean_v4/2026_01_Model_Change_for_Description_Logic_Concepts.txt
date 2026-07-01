@@ -1,0 +1,13 @@
+TITLE: Model Change for Description Logic Concepts
+YEAR: 2026 | CAT: Outstanding Paper | TYPE: model-method
+ABSTRACT WC: 87 | INTRO WC: 212
+
+================================================================================
+ABSTRACT:
+================================================================================
+We consider the problem of modifying a description cept in light of models represented as pointed model change, We call this setting and distinguish kinds of changes: eviction, which consists of models; reception, which incorporates models; which combines removal with incorporation single operation. We introduce a formal notion and argue that it does not reduce to a simple eviction and reception, contrary to intuition. We tive and negative results on the compatibility EL ALC reception for and description logic (cid:150) ALC the compatibility of revision for concepts.
+
+================================================================================
+INTRO:
+================================================================================
+Keeping beliefs updated is a central problem representation, that has been investigated in different logics and applications. In the main lief change research, the belief base is finite of information expressing how to modify it as sets of formulae in the underlying logic Ga¨rdenfors Alchourro´n, Ga¨rdenfors, 1988; 1985). In many scenarios, however, using sets specify the observed change is more suitable mulae. This is well studied in the context of interpretations (De Raedt 1997), where the concise formula that is consistent with models itive or negative. In the context of description process of building an ontology usually goes where the person creating it studies possible discarding models when they are proven new models previously not considered. The illustrate model change operations for DL Araci is visiting a zoo in Australia Example 1. little about Australian animals. She knows a mammal that lays eggs, so her belief on Mammal lays Egg Platypus She sees a platypus ‘d’ but knows nothing So, she entertains the two following possible Copyright © 2026, Association for the Advancement Intelligence (www.aaai.org). All rights reserved. Ozaki1, 2 Ana Jandson S. Ribeiro 1University of Oslo, Norway 2Cardiff University, UK an a ozaki u ib no ribeiro j cardiff ac uk I I (I ,d) {d,e}⊆∆ =∆ and with 2: 1

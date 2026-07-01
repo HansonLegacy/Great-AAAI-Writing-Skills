@@ -1,0 +1,23 @@
+TITLE: Expressive and Flexible Simulation of Information Spread Strategies in Social
+OFFICIAL: Expressive and Flexible Simulation of Information Spread Strategies in Social Networks Using Planning
+YEAR: 2024 | CATEGORY: Best Demonstration Award | AUTO_TYPE: model-method
+PAGES: 3 | ABSTRACT WORDS: 0
+HAS CONTRIBUTIONS: False | HAS TEASER: True
+ABSTRACT CITATIONS: 0
+
+================================================================================
+ABSTRACT:
+================================================================================
+
+
+================================================================================
+INTRO (first 5000 chars):
+================================================================================
+
+
+================================================================================
+SECTIONS:
+================================================================================
+
+
+ERROR: none

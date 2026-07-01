@@ -1,0 +1,23 @@
+TITLE: Fractured Glass, Failing Cameras: Simulating Physics-Based Adversarial Samples
+OFFICIAL: Fractured Glass, Failing Cameras: Simulating PhysicsBased Adversarial Samples for Autonomous Driving Systems
+YEAR: 2026 | CATEGORY: Best Poster | AUTO_TYPE: model-method
+PAGES: 9 | ABSTRACT WORDS: 0
+HAS CONTRIBUTIONS: False | HAS TEASER: True
+ABSTRACT CITATIONS: 0
+
+================================================================================
+ABSTRACT:
+================================================================================
+
+
+================================================================================
+INTRO (first 5000 chars):
+================================================================================
+
+
+================================================================================
+SECTIONS:
+================================================================================
+
+
+ERROR: none

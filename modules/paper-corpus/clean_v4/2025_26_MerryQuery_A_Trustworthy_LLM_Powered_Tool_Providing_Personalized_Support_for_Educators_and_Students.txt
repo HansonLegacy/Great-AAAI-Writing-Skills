@@ -1,0 +1,13 @@
+TITLE: MerryQuery: A Trustworthy LLM-Powered Tool Providing Personalized Support for Educators and Students
+YEAR: 2025 | CAT: Demonstration Award | TYPE: model-method
+ABSTRACT WC: 108 | INTRO WC: 0
+
+================================================================================
+ABSTRACT:
+================================================================================
+The potential of Large Language Models (LLMs) tion is not trivial, but concerns about academic misinformation, and overreliance limit their dress these issues, we introduce MerryQuery, educational assistant using Retrieval Augmented (RAG), to provide contextually relevant, sponses. MerryQuery features guided dialogues citations to ensure trust and improve student tionally, it enables instructors to monitor student customize response granularity and input multi modal mater i als without compromising data fidelity. By dent and instructor needs, MerryQuery offers way to integrate LLMs into educational settings. Tool Prototype — https m q be nya mint a barsi com User Guide — https explore m q be nya mint a barsi com
+
+================================================================================
+INTRO:
+================================================================================
+
