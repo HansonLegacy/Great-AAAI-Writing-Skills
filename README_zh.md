@@ -18,7 +18,13 @@
 
 ## What Is This?
 
-A **Claude Code / Codex CLI skill** that helps you write better AAAI 2027 papers. It doesn't write the paper for you — it gives you structured, evidence-based guidance at every stage: from planning your outline to polishing your final draft. Every rule is tagged with its source: `📄` (distilled from AAAI 2023–2026 award-winning papers) or `📋` (AAAI 2027 Author Kit specification).
+**Great AAAI Writing Skills** is a Claude Code / Codex CLI skill purpose-built for AAAI 2027 paper writing.
+
+- 📄 **50 AAAI award-winning papers distilled** — writing patterns from AAAI 2023–2026 Oral, Distinguished, and Best Paper winners systematically extracted into reusable templates, sentence patterns, and strategies
+- 📋 **Full 2027 format compliance** — every AAAI 2027 Author Kit constraint (forbidden packages, double-blind requirements, page limits, reproducibility checklist) baked into automated checks
+- 🧠 **Not a one-click generator** — it won't write your paper for you, but it gives you evidence-backed, sentence-level, actionable guidance at every stage
+
+Describe your research. The skill handles orchestration, templates, self-checks, and review simulation.
 
 ---
 

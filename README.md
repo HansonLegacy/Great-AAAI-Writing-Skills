@@ -18,7 +18,13 @@
 
 ## 这是什么？
 
-一个 **Claude Code / Codex CLI skill**，帮你写出更好的 AAAI 2027 论文。它不是一键生成器——而是在每个阶段给你结构化、有据可查的写作指导。每条规律标注来源：`📄`（来自 AAAI 2023–2026 获奖论文）或 `📋`（来自 AAAI 2027 Author Kit 规范）。
+**Great AAAI Writing Skills** 是一个 Claude Code / Codex CLI skill，专为 AAAI 2027 论文写作打造。
+
+- 📄 **50 篇 AAAI 获奖论文蒸馏**——AAAi 2023–2026 年 Oral、Distinguished、Best Paper 的写作规律被系统提取为可复用的模板、句法和策略
+- 📋 **2027 格式规范全覆盖**——AAAI 2027 Author Kit 的每一条约束（禁用包、双盲要求、页数限制、reproducibility checklist）已内化为自动检查项
+- 🧠 **不是一键生成器**——它不会替你写论文，但会在每个阶段给你有据可查、逐句可执行的结构化指导
+
+你只需要描述你的研究，剩下的编排、模板、自查、审稿模拟全部由 skill 调度完成。
 
 ---
 
