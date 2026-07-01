@@ -15,20 +15,20 @@
 
 ```bash
 # Linux / macOS
-git clone https://github.com/HansonLegacy/aaai-writing.git ~/.claude/skills/aaai-writing
+git clone https://github.com/HansonLegacy/Great-AAAI-Writing-Skills.git ~/.claude/skills/Great-AAAI-Writing-Skills
 
 # Windows (PowerShell)
-git clone https://github.com/HansonLegacy/aaai-writing.git $env:USERPROFILE\.claude\skills\aaai-writing
+git clone https://github.com/HansonLegacy/Great-AAAI-Writing-Skills.git $env:USERPROFILE\.claude\skills\Great-AAAI-Writing-Skills
 ```
 
 ### Codex CLI (OpenAI)
 
 ```bash
 # Linux / macOS
-git clone https://github.com/HansonLegacy/aaai-writing.git ~/.codex/skills/aaai-writing
+git clone https://github.com/HansonLegacy/Great-AAAI-Writing-Skills.git ~/.codex/skills/Great-AAAI-Writing-Skills
 
 # Windows (PowerShell)
-git clone https://github.com/HansonLegacy/aaai-writing.git $env:USERPROFILE\.codex\skills\aaai-writing
+git clone https://github.com/HansonLegacy/Great-AAAI-Writing-Skills.git $env:USERPROFILE\.codex\skills\Great-AAAI-Writing-Skills
 ```
 
 > 💡 **Both Claude Code and Codex CLI use the same `SKILL.md` format** — no separate setup needed. Clone once to your preferred agent's skills directory.
@@ -37,10 +37,10 @@ git clone https://github.com/HansonLegacy/aaai-writing.git $env:USERPROFILE\.cod
 
 ```bash
 # Claude Code
-claude code skills list | grep aaai-writing
+claude code skills list | grep Great-AAAI-Writing-Skills
 
 # Codex CLI
-codex skills list | grep aaai-writing
+codex skills list | grep Great-AAAI-Writing-Skills
 ```
 
 ## 第一个用例

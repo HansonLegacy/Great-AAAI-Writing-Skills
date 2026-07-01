@@ -12,7 +12,7 @@
 - 获奖论文实例有误
 - YAML frontmatter 格式错误
 
-请 [开 Issue](https://github.com/HansonLegacy/aaai-writing/issues/new?template=bug_report.md)。
+请 [开 Issue](https://github.com/HansonLegacy/Great-AAAI-Writing-Skills/issues/new?template=bug_report.md)。
 
 ### 💡 提议新功能
 
@@ -21,13 +21,13 @@
 - 新的审稿红旗词
 - 新的论文类型或细分场景
 
-请 [开 Feature Request](https://github.com/HansonLegacy/aaai-writing/issues/new?template=feature_request.md)。
+请 [开 Feature Request](https://github.com/HansonLegacy/Great-AAAI-Writing-Skills/issues/new?template=feature_request.md)。
 
 ### 📄 贡献论文实例
 
 如果你发现了 AAAI 获奖论文中的优秀写作实例：
 
-请 [开 Paper Instance Issue](https://github.com/HansonLegacy/aaai-writing/issues/new?template=paper_type_request.md)。
+请 [开 Paper Instance Issue](https://github.com/HansonLegacy/Great-AAAI-Writing-Skills/issues/new?template=paper_type_request.md)。
 
 ### 🔧 提交 PR
 
@@ -67,8 +67,8 @@
 
 ```bash
 # 克隆
-git clone https://github.com/HansonLegacy/aaai-writing.git
-cd aaai-writing
+git clone https://github.com/HansonLegacy/Great-AAAI-Writing-Skills.git
+cd Great-AAAI-Writing-Skills
 
 # 安装 markdownlint（可选）
 npm install -g markdownlint-cli

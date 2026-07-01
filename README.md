@@ -1,14 +1,14 @@
 <div align="center">
-  <img src="assets/header-banner.svg" width="100%" alt="AAAI Writing Skill — AI-powered structured writing system for AAAI 2027" />
+  <img src="assets/header-banner.png" width="100%" alt="Great AAAI Writing Skills — AI-powered structured writing system for AAAI 2027" />
 </div>
 
 <div align="center">
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg?color=blue)](LICENSE)
 [![Claude Code](https://img.shields.io/badge/Claude%20Code-Skill-6C3C99?color=6C3C99)](https://claude.ai/code)
+[![Codex CLI](https://img.shields.io/badge/Codex-CLI-000000?color=000000)](https://github.com/openai/codex)
 [![AAAI 2027](https://img.shields.io/badge/AAAI-2027-1a5276?color=1a5276)](https://aaai.org/conference/aaai/aaai-27/)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?color=brightgreen)](CONTRIBUTING.md)
-[![Stars](https://img.shields.io/github/stars/HansonLegacy/aaai-writing?style=flat&labelColor=0d3b56&color=c8963e)](https://github.com/HansonLegacy/aaai-writing/stargazers)
 
 **English** · [**中文**](README_zh.md)
 
@@ -16,33 +16,9 @@
 
 ---
 
-## ✨ What It Does
+## What Is This?
 
-A **Claude Code Skill** that orchestrates your entire AAAI paper-writing process across 5 phases, with **4 paper-type specializations** and **50 award-winning papers** worth of distilled patterns. Every rule is tagged with its source: `📄` (paper instance) or `📋` (Author Kit spec).
-
-<table>
-<tr>
-<td width="50%">
-
-✅ **What this is**
-- 5-phase orchestrated workflow
-- Evidence-based (50-paper corpus)
-- 4 paper-type branching
-- AAAI 2027 format-aware
-- Modular, lazy-loaded prompts
-
-</td>
-<td width="50%">
-
-❌ **What this isn't**
-- A one-click paper generator
-- Writing guidance for CVPR / NeurIPS
-- A substitute for research thinking
-- A grammar checker
-
-</td>
-</tr>
-</table>
+A **Claude Code / Codex CLI skill** that helps you write better AAAI 2027 papers. It doesn't write the paper for you — it gives you structured, evidence-based guidance at every stage: from planning your outline to polishing your final draft. Every rule is tagged with its source: `📄` (distilled from AAAI 2023–2026 award-winning papers) or `📋` (AAAI 2027 Author Kit specification).
 
 ---
 
@@ -50,33 +26,94 @@ A **Claude Code Skill** that orchestrates your entire AAAI paper-writing process
 
 ```bash
 # Claude Code
-git clone https://github.com/HansonLegacy/aaai-writing.git ~/.claude/skills/aaai-writing
+git clone https://github.com/HansonLegacy/Great-AAAI-Writing-Skills.git ~/.claude/skills/aaai-writing
 
 # Codex CLI (OpenAI)
-git clone https://github.com/HansonLegacy/aaai-writing.git ~/.codex/skills/aaai-writing
+git clone https://github.com/HansonLegacy/Great-AAAI-Writing-Skills.git ~/.codex/skills/aaai-writing
 
 # Windows
-git clone https://github.com/HansonLegacy/aaai-writing.git %USERPROFILE%\.claude\skills\aaai-writing
+git clone https://github.com/HansonLegacy/Great-AAAI-Writing-Skills.git %USERPROFILE%\.claude\skills\aaai-writing
 ```
 
-> 💡 Works with both **Claude Code** and **Codex CLI** — same `SKILL.md` format. The skill auto-activates when you mention AAAI paper writing.
-
-Then just talk to your AI coding agent:
-
-```
-You: I'm writing an AAAI 2027 paper about video frame interpolation.
-     Help me get started.
-
-Agent: [Phase 1] Let's first identify your paper type...
-       [Phase 2] Here's your outline with page budget...
-       [Phase 3] Let's write Section 1 — Title...
-```
+> 💡 Works with **Claude Code** and **Codex CLI** — same `SKILL.md` format. The skill auto-activates when you mention writing an AAAI paper.
 
 > ⚡ **Prerequisite**: [Claude Code](https://claude.ai/code) or [Codex CLI](https://github.com/openai/codex) installed.
 
 ---
 
-## 📖 The Workflow
+## 📖 What You Can Do
+
+### 📝 Get Per-Section Draft Feedback
+
+> *"I have a draft of my Method section. Help me improve it."*
+> *"My Introduction doesn't flow well. What should I fix?"*
+
+Drop in a draft of any section. The skill loads the corresponding module (`sections/method.md`, `sections/introduction.md`, etc.) and gives you **line-by-line suggestions** based on patterns distilled from 50 award-winning AAAI papers — not generic writing tips.
+
+| Section | What It Checks |
+|---------|---------------|
+| Title | Is it searchable? Does it encode the paper type? Does it include a memorable 3–10 character abbreviation? |
+| Abstract | Does it follow the 5-step arc? Is it 140–180 words? Are there forbidden `\cite` commands? |
+| Introduction | Does it follow the 6-paragraph skeleton? Are pain points quantified? Do contributions align 1:1 with innovations? |
+| Method | Is there a clear overview figure? Are design choices motivated? Is the notation consistent? |
+| Experiments | Does each claim have a matching experiment? Are ablations complete? Are baselines comprehensive? |
+| Related Work | Is it thematic (not author-list)? Does it end with a clear gap statement? |
+| Conclusion | Is it ≤ 0.5 pages? Does it include honest limitations? Is the future work specific? |
+
+### 🔍 Run an AI-Powered Peer Review
+
+> *"Review my full paper as if you were an AAAI PC member."*
+
+The built-in **review simulator** scores your paper across **7 dimensions** (significance, novelty, soundness, clarity, experiments, related work, reproducibility) with **calibrated scoring** based on real AAAI acceptance thresholds. It outputs a structured review report — reviewer questions, weakness flags, and rebuttal strategies.
+
+You also get access to **65+ red-flag trigger words** (with regex-ready patterns) that reviewers commonly flag: `"novel"`, `"first to"`, `"significantly outperforms"`, `"extensive experiments demonstrate"`, and more. Run a quick grep before submitting.
+
+### 📋 Check Your .tex for Format Violations
+
+> *"Is my paper.tex compliant with the AAAI 2027 Author Kit?"*
+
+The **format compliance module** scans for **25+ forbidden packages** (`geometry`, `titlesec`, `ulem`, `fullpage`, `hyperref`...) and **20+ forbidden commands** (`\newpage`, `\clearpage`, `\tiny`, `\resizebox`, `\vspace{-`...). Also checks: US Letter paper size, abstract citations, page numbers, section ordering, figure format, and double-blind violations.
+
+Works on **macOS, Linux, and Windows** — both bash and PowerShell commands included.
+
+### ✍️ Polish Your Sentences
+
+> *"My abstract feels wordy. Can you tighten it?"*
+> *"The reviewer said my contribution claims sound inflated."*
+
+Use **34 fill-in-the-blank sentence templates** and **15 Before/After rewrite pairs**, organized by section and function:
+
+- Opening hooks → 5 patterns
+- Pain point sentences → 3 patterns
+- Contribution statements → 4 patterns
+- Result reporting → 3 patterns
+- Limitation statements → 3 patterns
+- Transition sentences → 4 patterns
+
+Each template shows what to fill in, what to avoid, and which paper type it fits best.
+
+### 📐 Write Better Captions
+
+> *"Does this caption follow AAAI conventions? Is it self-contained?"*
+
+**7 caption templates** and **8 Before/After rewrite groups**. Figure captions (pipeline, comparison, teaser) and table captions (main results, ablation, analysis, resource) are treated separately. Core principle: a reviewer should understand your figure **without reading the body text**.
+
+### 🏷️ Get Paper-Type-Specific Strategy
+
+> *"I'm writing a benchmark paper. How should I structure my Introduction differently?"*
+
+The skill identifies your paper as one of **4 types** and injects type-specific guidance throughout:
+
+| Type | Example Papers (AAAI Award-Winning) | Special Handling |
+|------|-------------------------------------|-----------------|
+| **Theory / Algorithm** | Revelations (2025), Every-Bit-Helps (2025) | Proof sketch structure, Preliminaries + Main Results instead of Method |
+| **Model / Method** | LLM2CLIP (2026), CowClip (2023) | Module-by-module description, SOTA tables, full ablation |
+| **Benchmark / Resource** | DivShift (2025), DISCount (2024) | Data collection + inter-annotator agreement + baseline diversity |
+| **Application-Driven** | PlantTraitNet (2026), Slum Detection (2026) | Domain problem → AI solution, real-world deployment, ethical statement |
+
+---
+
+## ⚡ The Workflow
 
 | # | Phase | What Happens | Output |
 |---|-------|-------------|--------|
@@ -86,94 +123,41 @@ Agent: [Phase 1] Let's first identify your paper type...
 | 4 | ✨ **Polish** | Reverse outlining + claim-evidence mapping + term scan | Coherent manuscript |
 | 5 | 🔍 **Review** | Format compliance + double-blind + reproducibility | Submission-ready PDF |
 
-```mermaid
-flowchart LR
-    A[🎯 Position<br/>Paper Type] --> B[🗺️ Outline<br/>Page Budget]
-    B --> C[✍️ Write<br/>7 Sections]
-    C --> D[✨ Polish<br/>Cross-Check]
-    D --> E[🔍 Review<br/>Format + Blind]
-
-    A -.->|loads| M1["paper-taxonomy.md"]
-    B -.->|loads| M2["outline-template.md"]
-    C -.->|loads| M3["sections/*.md"]
-    D -.->|loads| M4["sentence-craft.md<br/>caption-writing.md"]
-    E -.->|loads| M5["review/*.md"]
-
-    style A fill:#1a5276,color:#fff,stroke:#c8963e
-    style B fill:#1a5276,color:#fff,stroke:#c8963e
-    style C fill:#1a5276,color:#fff,stroke:#c8963e
-    style D fill:#1a5276,color:#fff,stroke:#c8963e
-    style E fill:#1a5276,color:#fff,stroke:#c8963e
-    style M1 fill:#f5f6f8,color:#1a1a2e,stroke:#c8963e
-    style M2 fill:#f5f6f8,color:#1a1a2e,stroke:#c8963e
-    style M3 fill:#f5f6f8,color:#1a1a2e,stroke:#c8963e
-    style M4 fill:#f5f6f8,color:#1a1a2e,stroke:#c8963e
-    style M5 fill:#f5f6f8,color:#1a1a2e,stroke:#c8963e
-```
+Each phase loads only the modules it needs — zero context bloat.
 
 ---
 
-## 🎯 Key Features
+## 🏗️ How It's Organized
 
-| | | |
-|---|---|---|
-| 🏷️ **4 Paper Types** | Theory / Model-Method / Benchmark / Application — each with dedicated templates and structural variants |
-| 📊 **50-Paper Corpus** | Quantitative patterns from AAAI 2023–2026 award-winning papers (oral, distinguished, best paper) |
-| ✍️ **Sentence Craft** | 34 fill-in-the-blank templates + 15 Before/After rewrite pairs, organized by section |
-| 📐 **Caption Writing** | 7 caption templates + 8 Before/After groups — figure and table captions differentiated |
-| 🔍 **Review Simulator** | AAAI PC-member view: 7 core questions, 4-round simulation, calibrated scoring |
-| 📋 **Format Compliance** | 8-category scan: 25 forbidden packages, 20+ forbidden commands |
-| 🚨 **Red Flags** | 65+ reviewer trigger words with regex-ready patterns |
-| 🎯 **Triple Alignment** | Pain points ↔ Innovations ↔ Contributions matched in number and order |
-
----
-
-## 🏗️ Architecture
-
-```mermaid
-flowchart TB
-    subgraph Orchestration[" "]
-        SKILL["SKILL.md<br/>━━━━━━━━━<br/>5-Phase Orchestrator<br/>Zero writing knowledge"]
-    end
-
-    subgraph Vertical["sections/ (Vertical)"]
-        direction LR
-        T["Title"] ~~~ A["Abstract"] ~~~ I["Introduction"] ~~~ R["Related Work"] ~~~ M["Method"] ~~~ E["Experiments"] ~~~ C["Conclusion"]
-    end
-
-    subgraph Horizontal["modules/ (Horizontal)"]
-        direction LR
-        SC["sentence-craft"] ~~~ FD["figure-design"] ~~~ CW["caption-writing"] ~~~ SR["self-review"] ~~~ RV["review/*"]
-    end
-
-    subgraph Types["paper-types/"]
-        direction LR
-        TH["theory"] ~~~ MM["model-method"] ~~~ BR["benchmark"] ~~~ AD["application"]
-    end
-
-    SKILL --> Vertical
-    SKILL --> Horizontal
-    SKILL --> Types
-
-    style Orchestration fill:#1a5276,color:#fff,stroke:#c8963e
-    style Vertical fill:#f5f6f8,color:#1a1a2e,stroke:#c8963e
-    style Horizontal fill:#f5f6f8,color:#1a1a2e,stroke:#c8963e
-    style Types fill:#f5f6f8,color:#1a1a2e,stroke:#c8963e
-    style SKILL fill:#1a5276,color:#fff,stroke:#c8963e
-    style T fill:#c8963e,color:#1a1a2e,stroke:#c8963e
-    style A fill:#c8963e,color:#1a1a2e,stroke:#c8963e
-    style I fill:#c8963e,color:#1a1a2e,stroke:#c8963e
-    style R fill:#c8963e,color:#1a1a2e,stroke:#c8963e
-    style M fill:#c8963e,color:#1a1a2e,stroke:#c8963e
-    style E fill:#c8963e,color:#1a1a2e,stroke:#c8963e
-    style C fill:#c8963e,color:#1a1a2e,stroke:#c8963e
+```
+Great-AAAI-Writing-Skills/
+│
+├── SKILL.md                  Orchestration layer — 5-phase dispatcher
+│
+├── sections/                 Per-chapter writing guidance
+│   ├── title.md              ├── abstract.md         ├── introduction.md
+│   ├── related-work.md       ├── method.md           ├── experiments.md
+│   └── conclusion.md
+│
+├── modules/                  Cross-cutting craft modules
+│   ├── sentence-craft.md     34 sentence templates + Before/After rewrites
+│   ├── caption-writing.md    7 caption templates + diagnostics
+│   ├── figure-design.md      Visual design and layout rules
+│   ├── self-review.md        Lightweight self-audit framework
+│   ├── distilled-patterns.md Quantitative benchmarks from 50 papers
+│   ├── paper-taxonomy.md     4-type classification + strategy
+│   ├── outline-template.md   Page budget + section plan
+│   ├── compliance-quick.md   10-item format checklist
+│   ├── review/               5-module deep review (AAAI 2027-specific)
+│   ├── review-simulator/     PC-member view: scoring + Q&A + rebuttal
+│   └── paper-corpus/         50 award-winning paper abstracts + analysis
+│
+└── paper-types/              Type-specific injection layer
+    ├── theory.md             ├── model-method.md
+    ├── benchmark-resource.md └── application-driven.md
 ```
 
-- **`sections/`** — Per-chapter guidance (Abstract → Intro → ... → Conclusion)
-- **`modules/`** — Cross-cutting craft (sentences, figures, captions, review)
-- **`paper-types/`** — Type injection layer (theory ≠ benchmark ≠ model ≠ application)
-
-> 🧠 **Lazy loading**: only the current phase's module is read — no context bloat.
+The architecture is **3-layer lazy-loading**: the orchestrator (`SKILL.md`) dispatches to the right module at the right time. You never load all files — only the 2–3 relevant to your current phase and paper type.
 
 📖 [Full architecture docs →](docs/architecture.md)
 
@@ -184,8 +168,8 @@ flowchart TB
 | Document | |
 |----------|--|
 | [Quick Start](docs/quickstart.md) | Get writing in 5 minutes |
-| [Architecture](docs/architecture.md) | Module design + routing + upstream skills |
-| [Workflow](docs/workflow.md) | 5 phases with inputs, outputs, and checkpoints |
+| [Architecture](docs/architecture.md) | Module design + routing |
+| [Workflow Details](docs/workflow.md) | 5 phases with inputs, outputs, and checkpoints |
 | [Paper Types](docs/paper-types.md) | 4 types explained with a decision tree |
 | [Examples](docs/examples/) | 3 complete walkthroughs (model / theory / benchmark) |
 | [FAQ](docs/faq.md) | Language, copyright, other conferences, etc. |
@@ -198,16 +182,16 @@ This skill builds upon excellent open-source work:
 
 | Upstream Project | Author | License | How We Use It |
 |-----------------|--------|---------|---------------|
-| [Research-Paper-Writing-Skills](https://github.com/Master-cai/Research-Paper-Writing-Skills) | [@Master-cai](https://github.com/Master-cai) | MIT | Core writing methodology (reverse outlining, claim-evidence mapping, section templates) — AAAI-adapted and extended with 50-paper corpus |
-| [AI-paper-reviewer](https://github.com/FanBroWell/AI-paper-reviewer) | [@FanBroWell](https://github.com/FanBroWell) | MIT | 10-dimension review framework, format compliance checks, red-flag lexicon — rewritten for AAAI 2027 Author Kit |
+| [Research-Paper-Writing-Skills](https://github.com/Master-cai/Research-Paper-Writing-Skills) | [@Master-cai](https://github.com/Master-cai) | MIT | Core writing methodology — AAAI-adapted and extended with 50-paper corpus |
+| [AI-paper-reviewer](https://github.com/FanBroWell/AI-paper-reviewer) | [@FanBroWell](https://github.com/FanBroWell) | MIT | Review framework, compliance checks, red-flag lexicon — rewritten for AAAI 2027 |
 
-> **Note**: Research-Paper-Writing-Skills itself adapts Prof. Peng Sida's [open notes](https://github.com/pengsida/learning_research). We are grateful to both the original author and the curator for making this knowledge openly available.
+> **Note**: Research-Paper-Writing-Skills adapts Prof. Peng Sida's [open notes](https://github.com/pengsida/learning_research). We thank both the original author and the curator.
 
 ---
 
 ## 🤝 Contributing
 
-We welcome additions — especially from researchers who've been through the AAAI review process.
+We welcome additions — especially from researchers who have been through the AAAI review process.
 
 - 🐛 **Found a broken rule?** [Open a bug report](.github/ISSUE_TEMPLATE/bug_report.md)
 - 💡 **Noticed a missing pattern?** [Propose it](.github/ISSUE_TEMPLATE/feature_request.md)
@@ -236,5 +220,5 @@ MIT © 2026 HansonLegacy
 * * *
 
 <div align="center">
-  <sub>Built with ❤️ for the AI research community</sub>
+  <sub>Built for the AI research community</sub>
 </div>

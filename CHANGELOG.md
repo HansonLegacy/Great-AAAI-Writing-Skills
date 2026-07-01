@@ -18,4 +18,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - 50-paper distilled patterns corpus (AAAI 2023-2026)
 - CI: Markdown lint, link checker, stale issue management
 
-[Unreleased]: https://github.com/HansonLegacy/aaai-writing
+[Unreleased]: https://github.com/HansonLegacy/Great-AAAI-Writing-Skills
