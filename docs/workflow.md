@@ -35,7 +35,7 @@ Phase 5: 合规+自审 → 格式合规 + AAAI 特化自审 + 双盲检查
 1. 加载 `modules/outline-template.md`
 2. 根据论文类型选择对应模板
 3. 生成包含：章节标题、页数预算、核心信息点、Abstract 草稿
-4. 验证：页数 ≤ 7、story arc 完整、贡献-证据映射清晰
+4. 验证：页数预算符合具体 event 政策、Content Appendices 已计入适用页限、story arc 完整、贡献-证据映射清晰
 
 **验证点**：页数预算合理、所有章节有明确产出
 
@@ -81,7 +81,7 @@ Phase 5: 合规+自审 → 格式合规 + AAAI 特化自审 + 双盲检查
 
 ### 4.4 图表最终检查
 - Teaser 第一页可见
-- ≥ 300 dpi
+- 位图 ≥ 300 dpi；图中文字 ≥ 9pt
 - 表用 booktabs
 
 ## Phase 5: 合规+自审
@@ -98,4 +98,4 @@ Phase 5: 合规+自审 → 格式合规 + AAAI 特化自审 + 双盲检查
 
 **额外工具**：
 - 审稿模拟器：`modules/review-simulator/SKILL.md`
-- 格式自动化：调用 `aaai-compliance-checker` skill
+- 格式自动化：运行 `python scripts/aaai27_check.py ...`；缺失工件保留 `NOT_CHECKED`

@@ -24,7 +24,7 @@
 - 突出你在组合中做的非平凡设计决策
 - 如果有 Naive-A+B 的消融对比，在这里引用
 
-### Q1.3 "The contribution density doesn't justify 7 pages."
+### Q1.3 "The contribution density doesn't justify the allotted pages."
 
 **为什么 reviewer 会问**：正文有灌水段落，核心贡献只需 3-4 页就能说清。
 

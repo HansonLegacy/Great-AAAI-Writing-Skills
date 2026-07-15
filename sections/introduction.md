@@ -17,11 +17,11 @@
 | 约束 | 说明 |
 |------|------|
 | **引用** | Intro 可以含 `\cite`（与 Abstract 相反），且引用应尽早出现——段①/②即开始引用 |
-| **长度** | 约 600-1000 词（5-7 段 + contributions），视觉上 1-1.5 栏。不得超过页数预算（正文共 7 页） |
+| **长度** | 约 600-1000 词（5-7 段 + contributions），视觉上 1-1.5 栏；再按具体 event 的主文页限缩放 |
 | **Teaser 图** | `\includegraphics` 指向 teaser figure（`Fig. 1`）。图应在第一页可见——用 `[t]` 放置 |
 | **`\textbf{}` 用法** | 用于标痛点名、方法名（2-4 词短名），方便 reviewer 快速扫描和引用 |
 | **Contributions** | 标准结尾是 `\textbf{Our contributions are as follows:}` + itemize/enumerate 列表 |
-| **匿名投稿** | Teaser 图中不含机构 logo/名称；自引匿名化；不用 "In our previous work..." |
+| **匿名投稿** | Teaser 图中不含机构 logo/名称；已发表自引保留作者信息并按第三人称讨论；不用 "In our previous work..." |
 
 ---
 

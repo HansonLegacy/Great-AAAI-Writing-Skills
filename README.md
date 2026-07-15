@@ -21,7 +21,7 @@
 **Great AAAI Writing Skills** 是一个 Claude Code / Codex CLI skill，专为 AAAI 2027 论文写作打造。
 
 - 📄 **50 篇 AAAI 获奖论文蒸馏**——AAAi 2023–2026 年 Oral、Distinguished、Best Paper 的写作规律被系统提取为可复用的模板、句法和策略
-- 📋 **2027 格式规范全覆盖**——AAAI 2027 Author Kit 的每一条约束（禁用包、双盲要求、页数限制、reproducibility checklist）已内化为自动检查项
+- 📋 **2027 格式规则分层核查**——区分 Author Kit 通用规则、具体 event 政策和人工检查项；源码能确定的规则自动检查，缺少 PDF/log/打包文件时明确标为 `NOT_CHECKED`
 - 🧠 **不是一键生成器**——它不会替你写论文，但会在每个阶段给你有据可查、逐句可执行的结构化指导
 
 你只需要描述你的研究，剩下的编排、模板、自查、审稿模拟全部由 skill 调度完成。
@@ -78,9 +78,14 @@ git clone https://github.com/HansonLegacy/Great-AAAI-Writing-Skills.git %USERPRO
 
 > *"我的 paper.tex 是否符合 AAAI 2027 Author Kit？"*
 
-**格式合规模块**扫描 **25+ 个禁用包**（`geometry`、`titlesec`、`ulem`、`fullpage`、`hyperref`……）和 **20+ 个禁用命令**（`\newpage`、`\clearpage`、`\tiny`、`\resizebox`、`\vspace{-`……）。同时检查：US Letter 纸张大小、摘要内引用、页码、章节顺序、图片格式、双盲违规。
+**内置格式检查器**按 `anonymous` / `camera-ready` 阶段扫描禁用包和命令、有效 preamble、摘要引用、章节顺序、`\input` 使用，以及 Content Appendix / Technical Appendix / Reproducibility Checklist 的边界。页限和补充材料政策由具体 event 提供，匿名安全的 `links` 不会被一刀切误报。
 
-支持 **macOS、Linux、Windows**——bash 和 PowerShell 命令都有。
+```bash
+python scripts/aaai27_check.py paper.tex --stage anonymous \
+  --technical-appendix unknown --checklist unknown
+```
+
+支持 **macOS、Linux、Windows**。源码检查不等于 PDF 或最终提交包审计；未提供相应工件时报告会保留 `NOT_CHECKED`。
 
 ### ✍️ 打磨句子
 
@@ -153,10 +158,14 @@ Great-AAAI-Writing-Skills/
 │   ├── distilled-patterns.md 50 篇论文定量基准
 │   ├── paper-taxonomy.md     四类型分类 + 策略
 │   ├── outline-template.md   页数预算 + 大纲模板
-│   ├── compliance-quick.md   10 项格式速查
-│   ├── review/               五模块深度审校（AAAI 2027 特化）
+│   ├── compliance-quick.md   分阶段格式速查
+│   ├── review/               六模块深度审校（AAAI 2027 特化）
 │   ├── review-simulator/     PC 视角：评分 + 问答 + rebuttal
 │   └── paper-corpus/         50 篇获奖论文摘要 + 分析
+│
+├── rules/                    AAAI-27 机器可读规则源
+├── scripts/                  分阶段确定性格式检查器
+├── tests/                    格式检查器回归测试
 │
 └── paper-types/              类型专属注入层
     ├── theory.md             ├── model-method.md

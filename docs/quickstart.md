@@ -5,9 +5,12 @@
 ## 前提条件
 
 - 已安装 [Claude Code](https://claude.ai/code)（v2.x+）
+- 如需运行内置格式检查器：Python 3.9+
 - 已安装上游 skill（可选但推荐）：
   - `research-paper-writing` ([GitHub](https://github.com/Master-cai/Research-Paper-Writing-Skills))
-  - `paper-review` + `aaai-compliance-checker` ([GitHub](https://github.com/FanBroWell/AI-paper-reviewer))
+  - `paper-review` ([GitHub](https://github.com/FanBroWell/AI-paper-reviewer))
+
+格式检查器已随本仓库提供，不需要另行安装 `aaai-compliance-checker`。
 
 ## 安装
 

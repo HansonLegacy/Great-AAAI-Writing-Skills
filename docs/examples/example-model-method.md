@@ -63,13 +63,13 @@ Abstract (五步弧线草稿):
      estimator, then refines features through deformable convolutions...
   ⑤ Results: On Vimeo-90K, FlowRefine achieves PSNR 36.2 dB, outperforming...
 
-章节大纲 (7 页预算):
+章节大纲（示例假设具体 event 给出 7 页主文预算；请按目标 event 调整）:
   1. Introduction          (~1.0 页) — 痛点 + contributions
   2. Related Work          (~0.7 页) — 光流法 / kernel 法 / 混合法
   3. Method                (~2.0 页) — Overview + Flow Estimator + Feature Refiner + Loss
   4. Experiments           (~2.0 页) — SOTA 对比 + 消融 + 效率
   5. Conclusion            (~0.3 页)
-  References               (额外)
+  References               (是否计入由具体 event 决定)
 
 图表计划:
   Fig. 1: Teaser — FlowRefine 在一帧遮挡场景的对比

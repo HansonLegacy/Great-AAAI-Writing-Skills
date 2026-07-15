@@ -45,22 +45,22 @@
 → 🔴 **AAAI 硬性规则违反 = 格式退回**。修复：改为点名数据集/方法名（如 "RefCOCO", "GLaMM"），不加 `\cite{}`
 
 **A2. 使用任何禁用包**
-→ 🔴 **25 项禁用包（geometry/titlesec/authblk/ulem/float/fullpage/CJK/hyperref/times/setspace/balance...）= Desk reject**。修复：从 preamble 中移除，用 AAAI 模板自带样式
+→ 🔴 **ERROR**。以 `rules/aaai27-format-rules.json` 为唯一列表；从 preamble 中移除并使用 AAAI 模板自带样式。不要把所有格式错误统一描述成 desk reject
 
 **A3. 使用禁用命令**
-→ 🔴 **`\newpage` / `\clearpage` / `\vspace{-` / `\resizebox` / `\tiny` / `\linespread` / `\baselinestretch` = Desk reject**。修复：删掉；表用 `\setlength{\tabcolsep}` 压缩
+→ 🔴 **ERROR 或阶段相关**。负间距、整表缩放、字号/版芯修改按规则表处理；`\newpage` / `\clearpage` / `\pagebreak` 在 camera-ready 为硬错误，anonymous 阶段还需核对具体 event。表可用 `\setlength{\tabcolsep}` 合理调列间距
 
 **A4. 非 US Letter 纸张**
-→ 🔴 **Desk reject**。检查：`\documentclass[letterpaper]{article}`
+→ 🔴 **ERROR**。检查：`\documentclass[letterpaper]{article}`
 
-**A5. 正文 > 7 页**
-→ 🔴 **超页 = Desk reject**。References 不计入 7 页，但正文（含 Appendix）计入
+**A5. 超过具体 event 的主文页限**
+→ 🔴 **ERROR**。Author Kit 不给通用 “7 页”；Content Appendices 计入 event-specific 页限。未提供页限时标 `NEEDS_POLICY`
 
 **A6. 图表格式违规**
-→ 🔴 `.eps` / `.ps` / `.gif` 图片 = 编译失败；`minipage` 组合图 = 违规；`pgfplots` 实时编译 = 违规；`\resizebox` 用于表格 = 违规
+→ 🔴 `.eps` / `.ps` / `.gif`、LaTeX 内裁剪、`minipage` 组合图、实时 `pgfplots` 和整表 `\resizebox` 均按规则处理；位图需 ≥ 300 dpi，图中文字需 ≥ 9pt
 
 **A7. `\input` 拆分子文件**
-→ 🔴 单 `.tex` 文件要求（`.bib` 除外）。修复：合并所有 `\input` 到一个文件
+→ 🔴 Camera-ready 包要求单 `.tex` 文件。`.bib` 必须通过 `\bibliography{...}` 引用，并不是 `\input` 例外；只有 event 要求 embedded checklist 时才允许精确的 `\input{ReproducibilityChecklist.tex}`
 
 **A8. 出现页码**
 → 🔴 AAAI 禁止页码。检查：无 `\pagestyle`、PDF 无页眉页脚
@@ -111,11 +111,11 @@ D1-D6: Personal GitHub / Acknowledgments 段 / PDF Author 字段 / LaTeX 注释 
 **D8. `\author{}` 不是 `Anonymous Submission`**
 → 🔴 匿名投稿必须 `\author{Anonymous Submission}`，`\affiliations{}` 空
 
-**D9. 存在 `links` 块**
-→ 🔴 AAAI 匿名投稿不允许 links 块（暴露 code/dataset 链接）
+**D9. `links` 块含识别性 URL**
+→ 🔴 Personal GitHub、实验室主页、机构仓库或可反查作者的重定向会破坏匿名；身份安全的匿名 code/data 链接可以保留
 
 **D10. 写了 "Code will be released" 或代码链接**
-→ 🔴 匿名投稿中任何代码链接都可能暴露身份
+→ 仅在链接或措辞泄露身份时为 🔴；未来发布声明本身不等于泄密，也不等于 Checklist 所说“代码已包含”
 
 **D11. 致谢段未 placeholder 或未省略**
 → 🟠 匿名投稿不应有 `\section*{Acknowledgments}`（或内容留空占位）
@@ -148,14 +148,14 @@ L1-L10 项与上游完全一致（保留全部 10 条）：`Despite the fact tha
 ## 💡 AAAI 投稿前 24h 必检
 
 ```
-☐ 1. 全文搜索 `\cite` 不在 abstract 环境内
-☐ 2. 全文搜索 `geometry|titlesec|authblk|ulem|float|fullpage|CJK|hyperref|times|setspace` — 0 命中
-☐ 3. 全文搜索 `\newpage|\clearpage|\vspace\{-|\resizebox|\tiny` — 0 命中
-☐ 4. 正文 ≤ 7 页
+☐ 1. Abstract 内所有 citation command（含 starred 变体、`\nocite`）均为 0
+☐ 2. `python scripts/aaai27_check.py ...` 的禁包/命令检查无 ERROR（不要用会扫描注释和示例文本的裸 grep 代替）
+☐ 3. 断页命令已按 anonymous/camera-ready 阶段和 event 政策判断
+☐ 4. 已提供并满足具体 event 页限；Content Appendices 已计入
 ☐ 5. PDF 无页码
 ☐ 6. 图均 .jpg/.png/.pdf — 无 .eps/.ps/.gif
 ☐ 7. frenchspacing 已开启
 ☐ 8. 标题 Chicago Title Case
 ☐ 9. \author{Anonymous Submission}, \affiliations{}
-☐ 10. PDF metadata 已清空
+☐ 10. PDF metadata 无作者、机构等身份信息（通用 Creator/Producer 不误报）
 ```
