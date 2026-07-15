@@ -15,7 +15,7 @@
 |--------|---------|
 | 核心贡献能否用一句话说清？ | "This paper proposes X that does Y, which matters because Z." |
 | 贡献是否超越了 trivial combination？ | 不是"把 A 和 B 拼在一起"——有真正的设计 insight |
-| 7 页正文中贡献密度是否足够？ | 正文每页都在推进核心贡献，没有灌水段落 |
+| event 给定页数中的贡献密度是否足够？ | 正文每页都在推进核心贡献，没有灌水段落 |
 | 与 closest prior work 的差异是否实质？ | Reviewer 能清楚说出"这篇论文的 X 与 [cite] 的 Y 有本质不同因为..." |
 
 **This is the #1 AAAI rejection reason.**
@@ -43,18 +43,18 @@
 | 图表自包含 | 图注/表注让 reviewer 不读正文也能大致理解 |
 | Abstract 标准 | 无 `\cite`、150-200 词、五步弧线完整 |
 
-### Q4: 格式是否合规？（🔴 Desk Reject 防线）
+### Q4: 格式是否合规？（硬性规则与匿名性防线）
 
 | 检查项 | 通过标准 |
 |--------|---------|
-| 无禁用包（25 项） | geometry, titlesec, authblk, ulem, float, fullpage, CJK, hyperref... |
-| 无禁用命令 | `\newpage`, `\clearpage`, `\vspace{-`, `\resizebox`, `\tiny`... |
-| 单 .tex 文件 | 无 `\input` 拆分（.bib 除外） |
+| 无禁用包 | 以 `rules/aaai27-format-rules.json` 为唯一规则源 |
+| 无禁用命令 | 断页命令按阶段判断；其余按规则源检查 |
+| 单 `.tex` 文件 | Camera-ready 打包要求；`.bib` 用 `\bibliography`，不是 `\input` 例外 |
 | US Letter 纸张 | `\documentclass[letterpaper]{article}` |
-| 章节顺序正确 | Abstract → 正文 → [Appendix] → [Ethical] → [Ack] → References |
-| 正文 ≤ 7 页 | References 额外 |
-| 图仅 .jpg/.png/.pdf | 分辨率 ≥ 300 dpi |
-| 匿名投稿合规 | `\author{Anonymous Submission}` + `\affiliations{}` + 无 links 块 |
+| 章节顺序正确 | 区分 Content Appendix、Technical/Supplement 与 Checklist，并应用 event 政策 |
+| 页数合规 | 主文（含 Content Appendices）满足具体 event 上限；未知则 `NEEDS_POLICY` |
+| 图仅 .jpg/.png/.pdf | 位图 ≥ 300 dpi，最终版面图中文字 ≥ 9pt |
+| 匿名投稿合规 | `\author{Anonymous Submission}` + `\affiliations{}`；links（若有）身份安全 |
 
 ### Q5: Related Work 是否完整公平？（🟠 高权重）
 
@@ -63,7 +63,7 @@
 | 覆盖了该子领域的关键工作？ | 没有明显遗漏 |
 | 对 prior work 的描述公平？ | 不贬低（"X fails to..."），客观陈述差异 |
 | 切割清晰但不树敌？ | "X focuses on Y, while we address Z" |
-| 自引比例合理？ | 匿名投稿中自引已匿名化；自引不超过 30% |
+| 自引处理准确？ | 已发表自引保留完整文献信息并按第三人称讨论；不使用武断的比例阈值 |
 
 ### Q6: 方法是否有技术深度？（🟡 中权重）
 
@@ -80,7 +80,7 @@
 |--------|---------|
 | 受众广度 | AAAI 审稿人来自多个 track，论文是否能被足够宽的受众理解？ |
 | 会议匹配度 | 这篇论文是否更适合投 NeurIPS（偏理论方法）/ CVPR（偏视觉）/ ACL（偏 NLP）？ |
-| 页数适配 | 7 页限制下内容是否完整——还是明显缺了重要内容（limitations 等）？ |
+| 页数适配 | 在具体 event 页限下内容是否完整——还是明显缺了重要内容（limitations 等）？ |
 
 ---
 
@@ -109,12 +109,12 @@
 | [C] 写作质量 + [H] 语言纯净度 + [I] 结构 | → **Q3（合并）** |
 | [D] 引用 & 归属 | → Q5 |
 | [E] 数学符号 | → Q6（方法深度的一部分） |
-| [F] 双盲匿名性 + [G] 格式 | → **Q4（合并为 Desk Reject 防线）** |
+| [F] 双盲匿名性 + [G] 格式 | → **Q4（合并为硬性规则与匿名性防线）** |
 | [J] 红旗 | → 贯穿 Q1-Q7 所有维度 |
 
 上游 10 维度 → 本框架 7 问题的**核心变化**：
 - AAAI reviewer 优先问"**贡献够不够**"（Q1），而非先挑写作瑕疵（C/H/I）
-- 格式和双盲**合并为一个 Desk Reject 防线**（Q4），不分散为两个维度
+- 格式和双盲**合并为一个可溯源的合规防线**（Q4），不擅自推断统一 desk-reject 后果
 - 新增 **Q7（是否适合 AAAI）**——这是 AAAI 特有的考量
 
 ---

@@ -1,0 +1,322 @@
+{
+  "schema_version": "1.0",
+  "python_requires": ">=3.9",
+  "author_kit": "AuthorKit27",
+  "status_order": [
+    "ERROR",
+    "NEEDS_POLICY",
+    "NOT_CHECKED",
+    "WARNING",
+    "PASS"
+  ],
+  "rules": [
+    {
+      "id": "preamble.documentclass",
+      "stage": ["anonymous", "camera-ready"],
+      "level": "ERROR",
+      "scope": "tex:preamble",
+      "source": {"file": "AnonymousSubmission2027.tex", "lines": "1"},
+      "rule": "Use exactly the article class on US Letter paper.",
+      "exception": "None for an official submission.",
+      "expected_class": "article",
+      "required_option": "letterpaper"
+    },
+    {
+      "id": "preamble.aaai-style",
+      "stage": ["anonymous", "camera-ready"],
+      "level": "ERROR",
+      "scope": "tex:preamble",
+      "source": {"file": "AnonymousSubmission2027.tex", "lines": "2,189-194"},
+      "rule": "Load aaai2027 in submission mode for anonymous review and without submission mode for camera-ready copy.",
+      "exception": "The ccby option is conditional on explicit AAAI distribution-license instructions.",
+      "package": "aaai2027"
+    },
+    {
+      "id": "preamble.required-lines",
+      "stage": ["anonymous", "camera-ready"],
+      "level": "ERROR",
+      "scope": "tex:preamble",
+      "source": {"file": "CameraReady2027.tex", "lines": "250-275"},
+      "rule": "Required preamble commands must be active before begin{document}; commented examples do not count.",
+      "exception": "The aaai2027 package option differs by stage.",
+      "requirements": [
+        {"name": "url package with hyphens", "pattern": "\\\\usepackage\\s*\\[\\s*hyphens\\s*\\]\\s*\\{\\s*url\\s*\\}"},
+        {"name": "graphicx package", "pattern": "\\\\usepackage\\s*\\{\\s*graphicx\\s*\\}"},
+        {"name": "roman URL style", "pattern": "\\\\urlstyle\\s*\\{\\s*rm\\s*\\}"},
+        {"name": "roman URL font", "pattern": "\\\\def\\s*\\\\UrlFont\\s*\\{\\s*\\\\rm\\s*\\}"},
+        {"name": "natbib without options", "pattern": "\\\\usepackage\\s*\\{\\s*natbib\\s*\\}"},
+        {"name": "caption without options", "pattern": "\\\\usepackage\\s*\\{\\s*caption\\s*\\}"},
+        {"name": "frenchspacing", "pattern": "\\\\frenchspacing\\b"}
+      ]
+    },
+    {
+      "id": "preamble.pdfinfo",
+      "stage": ["anonymous", "camera-ready"],
+      "level": "ERROR",
+      "scope": "tex:preamble",
+      "source": {"file": "CameraReady2027.tex", "lines": "37-41,270-274"},
+      "rule": "Keep the pdfinfo block limited to /TemplateVersion (2027.1).",
+      "exception": "Submission mode suppresses emitted metadata, but the source block is still required.",
+      "pattern": "\\\\pdfinfo\\s*\\{\\s*/TemplateVersion\\s*\\(2027\\.1\\)\\s*\\}"
+    },
+    {
+      "id": "package.forbidden",
+      "stage": ["anonymous", "camera-ready"],
+      "level": "ERROR",
+      "scope": "tex:preamble",
+      "source": {"file": "CameraReady2027.tex", "lines": "43-65,311-362"},
+      "rule": "Do not load packages forbidden by the Author Kit or by aaai2027.sty.",
+      "exception": "Packages loaded internally by the unmodified official aaai2027.sty are not author-source violations.",
+      "packages": [
+        "authblk", "babel", "balance", "bbm", "cjk", "courier", "epsf",
+        "epsfig", "euler", "float", "flushend", "fullpage", "geometry",
+        "graphics", "helvet", "hyperref", "indentfirst", "layout", "lmodern",
+        "multicol", "nameref", "navigator", "newtxtext", "pdfcomment",
+        "pgfplots", "psfig", "pstricks", "savetrees", "setspace", "stfloats",
+        "t1enc", "tabu", "times", "titlesec", "tocbibind", "ulem", "wrapfig"
+      ]
+    },
+    {
+      "id": "command.forbidden",
+      "stage": ["anonymous", "camera-ready"],
+      "level": "ERROR",
+      "scope": "tex:source",
+      "source": {"file": "CameraReady2027.tex", "lines": "66-78,311-362,470,480"},
+      "rule": "Do not use commands that alter AAAI spacing, layout, fonts, floats, or copyright behavior.",
+      "exception": "setlength{tabcolsep} is handled by a dedicated exception rule.",
+      "commands": [
+        "abovecaption", "abovedisplay", "addevensidemargin", "addsidemargin",
+        "addtolength", "balance", "baselinestretch", "belowcaption",
+        "belowdisplay", "break", "clip", "float", "linespread", "nocopyright",
+        "pubnote", "tiny", "trim"
+      ],
+      "layout_assignments": [
+        "columnsep", "textheight", "textwidth", "topmargin", "topskip",
+        "oddsidemargin", "evensidemargin"
+      ]
+    },
+    {
+      "id": "command.setlength",
+      "stage": ["anonymous", "camera-ready"],
+      "level": "ERROR",
+      "scope": "tex:source",
+      "source": {"file": "CameraReady2027.tex", "lines": "333-362,560-561"},
+      "rule": "Author-source setlength calls are forbidden except for table column spacing via tabcolsep.",
+      "exception": "setlength{tabcolsep}{...} is permitted for tables.",
+      "allowed_targets": ["tabcolsep"]
+    },
+    {
+      "id": "command.graphics-cropping",
+      "stage": ["anonymous", "camera-ready"],
+      "level": "ERROR",
+      "scope": "tex:includegraphics",
+      "source": {"file": "CameraReady2027.tex", "lines": "546-554,585-586"},
+      "rule": "Crop graphics outside LaTeX; includegraphics must not use clip, trim, or viewport options.",
+      "exception": "Ordinary prose that merely mentions these strings is not a command violation.",
+      "forbidden_options": ["clip", "trim", "viewport"]
+    },
+    {
+      "id": "command.page-break.camera-ready",
+      "stage": ["camera-ready"],
+      "level": "ERROR",
+      "scope": "tex:body",
+      "source": {"file": "CameraReady2027.tex", "lines": "365-366"},
+      "rule": "Camera-ready copy must not contain manual page-break commands.",
+      "exception": "None for final camera-ready copy.",
+      "commands": ["newpage", "clearpage", "pagebreak"]
+    },
+    {
+      "id": "command.page-break.anonymous",
+      "stage": ["anonymous"],
+      "level": "WARNING",
+      "scope": "tex:body",
+      "source": {"file": "CameraReady2027.tex", "lines": "365-366"},
+      "rule": "Avoid manual page breaks in anonymous copy unless the event instructions require one.",
+      "event_policy": "Some review processes may require references on a separate page.",
+      "commands": ["newpage", "clearpage", "pagebreak"]
+    },
+    {
+      "id": "structure.maketitle-abstract",
+      "stage": ["anonymous", "camera-ready"],
+      "level": "ERROR",
+      "scope": "tex:body",
+      "source": {"file": "CameraReady2027.tex", "lines": "278-299,472-473"},
+      "rule": "maketitle must precede one complete abstract environment, and the abstract must precede links and main sections.",
+      "exception": "None for an official paper.",
+      "citation_pattern": "\\\\(?:[Cc]ite[A-Za-z]*|shortcite|nocite)\\*?(?=\\s*(?:\\[|\\{))"
+    },
+    {
+      "id": "abstract.no-citations",
+      "stage": ["anonymous", "camera-ready"],
+      "level": "ERROR",
+      "scope": "tex:abstract",
+      "source": {"file": "CameraReady2027.tex", "lines": "472-473"},
+      "rule": "The abstract must not contain references through any cite-family command.",
+      "exception": "None.",
+      "citation_pattern": "\\\\(?:[Cc]ite[A-Za-z]*|shortcite|nocite)\\*?(?=\\s*(?:\\[|\\{))"
+    },
+    {
+      "id": "stage.anonymous-author",
+      "stage": ["anonymous"],
+      "level": "ERROR",
+      "scope": "tex:preamble",
+      "source": {"file": "AnonymousSubmission2027.tex", "lines": "175-196"},
+      "rule": "Anonymous source must use Anonymous Submission as the sole author and an empty affiliations block.",
+      "exception": "No identifying author or affiliation material may remain active.",
+      "author_pattern": "\\\\author\\s*\\{\\s*Anonymous\\s+Submission\\s*\\}",
+      "affiliations_pattern": "\\\\affiliations\\s*\\{\\s*\\}"
+    },
+    {
+      "id": "stage.camera-author",
+      "stage": ["camera-ready"],
+      "level": "ERROR",
+      "scope": "tex:preamble",
+      "source": {"file": "CameraReady2027.tex", "lines": "406-456"},
+      "rule": "Camera-ready source must contain real author and affiliation information and must not use Anonymous Submission.",
+      "exception": "None after acceptance.",
+      "anonymous_pattern": "\\\\author\\s*\\{\\s*Anonymous\\s+Submission\\s*\\}"
+    },
+    {
+      "id": "structure.links",
+      "stage": ["anonymous", "camera-ready"],
+      "level": "ERROR",
+      "scope": "tex:body",
+      "source": {"file": "AnonymousSubmission2027.tex", "lines": "166-173"},
+      "rule": "An optional links block belongs between the abstract and main body in both stages.",
+      "exception": "Anonymous links are allowed only when they do not reveal identity; identity safety requires human review.",
+      "environment": "links"
+    },
+    {
+      "id": "structure.single-source",
+      "stage": ["camera-ready"],
+      "level": "ERROR",
+      "scope": "tex:source",
+      "source": {"file": "CameraReady2027.tex", "lines": "223-238,301-307,817-819"},
+      "rule": "Do not split paper sections with input/include; .bib files are referenced with bibliography, never input.",
+      "exception": "The exact input{ReproducibilityChecklist.tex} command is permitted only when checklist policy is embedded.",
+      "checklist_filename": "ReproducibilityChecklist.tex"
+    },
+    {
+      "id": "structure.input.anonymous",
+      "stage": ["anonymous"],
+      "level": "NEEDS_POLICY",
+      "scope": "tex:source",
+      "source": {"file": "AnonymousSubmission2027.tex", "lines": "196"},
+      "rule": "Whether anonymous-review source may be split across files is event-specific.",
+      "event_policy": "Report non-checklist input/include commands as NEEDS_POLICY rather than applying the camera-ready packaging rule."
+    },
+    {
+      "id": "structure.bib-input",
+      "stage": ["anonymous", "camera-ready"],
+      "level": "ERROR",
+      "scope": "tex:source",
+      "source": {"file": "CameraReady2027.tex", "lines": "227-234,301-307"},
+      "rule": ".bib files must be referenced through bibliography{...}, not input/include.",
+      "exception": "None; a .bib file is a separate archive file, not an input exception."
+    },
+    {
+      "id": "structure.order",
+      "stage": ["anonymous", "camera-ready"],
+      "level": "ERROR",
+      "scope": "tex:body",
+      "source": {"file": "CameraReady2027.tex", "lines": "496-523"},
+      "rule": "Order main sections, content appendices, Ethical Statement, Acknowledgments, References, then only conference-permitted supplementary material.",
+      "exception": "Technical appendix placement is governed by the selected event policy.",
+      "ethical_title": "Ethical Statement",
+      "acknowledgments_title": "Acknowledgments",
+      "supplement_titles": ["Supplementary Material", "Technical Appendix", "Technical Appendices"]
+    },
+    {
+      "id": "structure.content-appendix",
+      "stage": ["anonymous", "camera-ready"],
+      "level": "ERROR",
+      "scope": "tex:body",
+      "source": {"file": "CameraReady2027.tex", "lines": "503-514"},
+      "rule": "Content appendices are part of the main paper, count toward the event page limit, and must precede References.",
+      "exception": "Lettered appendix numbering is required only when main sections are numbered.",
+      "command": "appendix"
+    },
+    {
+      "id": "structure.technical-appendix",
+      "stage": ["anonymous", "camera-ready"],
+      "level": "NEEDS_POLICY",
+      "scope": "tex:body",
+      "source": {"file": "CameraReady2027.tex", "lines": "503-510"},
+      "rule": "Supplementary Material / Technical Appendices may be inline, separate, or forbidden depending on the conference.",
+      "event_policy": "Set --technical-appendix to inline, separate, forbidden, or leave unknown for NEEDS_POLICY."
+    },
+    {
+      "id": "structure.checklist",
+      "stage": ["anonymous", "camera-ready"],
+      "level": "NEEDS_POLICY",
+      "scope": "tex:source",
+      "source": {"file": "AnonymousSubmission2027.tex", "lines": "185"},
+      "rule": "The reproducibility checklist may be embedded, submitted separately, or not required depending on the event.",
+      "event_policy": "Set --checklist to embedded, separate, not-required, or leave unknown for NEEDS_POLICY."
+    },
+    {
+      "id": "bibliography.style",
+      "stage": ["anonymous", "camera-ready"],
+      "level": "ERROR",
+      "scope": "tex:body",
+      "source": {"file": "CameraReady2027.tex", "lines": "632-646"},
+      "rule": "Use bibliography{...} near the end and do not issue a manual bibliographystyle command.",
+      "exception": "An embedded checklist may follow bibliography before end{document}."
+    },
+    {
+      "id": "citation.author-count",
+      "stage": ["anonymous", "camera-ready"],
+      "level": "NOT_CHECKED",
+      "scope": "rendered-citations",
+      "source": {"file": "CameraReady2027.tex", "lines": "482-483"},
+      "rule": "Use (Author Year) without an author-year comma; list all three authors and use et al. only for four or more.",
+      "exception": "This is governed by aaai2027.bst plus aaai2027.sty and is not inferred from raw citation commands.",
+      "automated": false
+    },
+    {
+      "id": "artifact.pdf",
+      "stage": ["anonymous", "camera-ready"],
+      "level": "NOT_CHECKED",
+      "scope": "pdf",
+      "source": {"file": "CameraReady2027.tex", "lines": "193-218"},
+      "rule": "Audit the compiled PDF for version, encryption, Type 3 fonts, page size, links/bookmarks, and visible layout.",
+      "exception": "A missing PDF must be reported as NOT_CHECKED, never PASS."
+    },
+    {
+      "id": "artifact.log",
+      "stage": ["anonymous", "camera-ready"],
+      "level": "NOT_CHECKED",
+      "scope": "log",
+      "source": {"file": "CameraReady2027.tex", "lines": "572-573"},
+      "rule": "Inspect the LaTeX log for compilation errors and overfull boxes.",
+      "exception": "A missing log must be reported as NOT_CHECKED, never PASS."
+    },
+    {
+      "id": "artifact.package",
+      "stage": ["camera-ready"],
+      "level": "NOT_CHECKED",
+      "scope": "package",
+      "source": {"file": "CameraReady2027.tex", "lines": "223-243"},
+      "rule": "Inspect the submitted archive for required and unused files; camera-ready archives must be at most 10 MB.",
+      "exception": "A missing camera-ready package must be reported as NOT_CHECKED, never PASS."
+    },
+    {
+      "id": "artifact.package.anonymous",
+      "stage": ["anonymous"],
+      "level": "NOT_CHECKED",
+      "scope": "package",
+      "source": {"file": "AnonymousSubmission2027.tex", "lines": "196"},
+      "rule": "Anonymous-review archive requirements and file naming are event-specific.",
+      "event_policy": "Inspect an supplied archive conservatively, but do not impose the camera-ready single-source, surname, or 10 MB publication-package rules."
+    },
+    {
+      "id": "page.limit",
+      "stage": ["anonymous", "camera-ready"],
+      "level": "NEEDS_POLICY",
+      "scope": "pdf:pagination",
+      "source": {"file": "CameraReady2027.tex", "lines": "212,385-389"},
+      "rule": "Page limits are event-specific; content appendices count as main-paper content.",
+      "event_policy": "Use --page-limit only with the applicable event limit; reference-page treatment still requires manual verification."
+    }
+  ]
+}

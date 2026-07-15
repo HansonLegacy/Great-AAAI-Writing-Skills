@@ -60,13 +60,15 @@
 aaai-writing（编排层）
   ├── research-paper-writing  → 通用写作方法论（reverse outlining / 三元组）
   │     https://github.com/Master-cai/Research-Paper-Writing-Skills (MIT)
-  ├── paper-review + aaai-compliance-checker  → 审稿框架 + 格式合规
+  ├── paper-review                           → 上游审稿框架参考
   │     https://github.com/FanBroWell/AI-paper-reviewer (MIT)
-  └── aaai-paper              → 规范速查手册（独立使用）
+  ├── rules/ + scripts/                      → 本仓库内置格式规则与确定性检查器
+  └── aaai-paper                             → 规范速查手册（独立使用）
 ```
 
 **关键差异**：aaai-writing 不是简单拼接上游 skill，而是在上游方法论基础上叠加了：
-- AAAI 2027 Author Kit 约束（7 页限制、禁用包/命令、natbib 等）
+
+- AAAI 2027 Author Kit 约束（event-specific 页限、禁用包/命令、natbib 等）
 - 50 篇获奖论文的定量基准和实例
 - 4 种论文类型的差异化策略
 

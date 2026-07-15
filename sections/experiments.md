@@ -184,7 +184,8 @@ Full NAME     & 85.7 & 78.4 & 93.1 & -- \\
 
 - 图注在图**下方**，10pt Roman
 - 图片格式 `.jpg` / `.png` / `.pdf` 三选一
-- 分辨率 ≥ 300 dpi
+- 位图分辨率 ≥ 300 dpi；矢量 PDF 不套用 DPI 阈值
+- 图内文字在最终版面中 ≥ 9pt
 - 颜色可读性：灰度打印也必须可读
 - 每张图在正文中被引用和讨论（不只 "see Fig. X"）
 
@@ -206,7 +207,7 @@ Full NAME     & 85.7 & 78.4 & 93.1 & -- \\
 
 ### 5.2 对 Reproducibility Checklist 的对齐
 
-AAAI 投稿要求填写 `ReproducibilityChecklist.tex`。实验节要确保：
+若具体 event 要求提交 `ReproducibilityChecklist.tex`，实验节应为所有适用问题提供可定位的论文证据：
 - [ ] 超参数搜索范围有文档
 - [ ] 计算资源用量有报告（GPU 型号、数量、训练时间）
 - [ ] 评估指标有精确定义
@@ -221,7 +222,7 @@ AAAI 投稿要求填写 `ReproducibilityChecklist.tex`。实验节要确保：
 - [ ] 无 `\resizebox`、无 `\tiny`？
 - [ ] 每个结果段落 = setup + result + comparison + interpretation？
 - [ ] 消融实验覆盖所有声称的模块？
-- [ ] 可视化图片 ≥ 300 dpi、灰度可读？
+- [ ] 可视化位图 ≥ 300 dpi、图中文字 ≥ 9pt、灰度可读？
 - [ ] 超参数信息完整（GPU/框架/optimizer/lr/batch/epochs/seeds）？
 - [ ] 所有实验 claim 可追溯到对应表和行号？
 - [ ] 与 Intro 中 claims 对照——每个实验 claim 都能在 Intro 中找到对应承诺？

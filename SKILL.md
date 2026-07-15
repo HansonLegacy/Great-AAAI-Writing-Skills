@@ -66,7 +66,8 @@ Phase 5: 合规+自审 → 格式合规 + AAAI 特化自审 + 双盲检查
 ### Step 2.2: 验证大纲
 
 大纲生成后，逐项验证：
-- [ ] **页数预算**：正文 ≤ 7 页（匿名投稿），各节分配合理
+
+- [ ] **页数预算**：先读取具体 event 的页限；Content Appendices 计入该页限，不从通用 Author Kit 推断固定页数
 - [ ] **Story arc**：Abstract → Intro → Method → Experiments 逻辑链完整
 - [ ] **贡献-证据映射**：每个核心贡献在 Experiments 中有对应验证
 - [ ] **图表计划**：teaser、pipeline、main result table、ablation 各有位置
@@ -135,7 +136,8 @@ Status: ✅ supported / ⚠️ needs evidence / ❌ contradicted
 
 加载 `modules/figure-design.md`，检查：
 - Teaser 图是否在第一页可见
-- 所有图分辨率 ≥ 300 dpi
+- 位图分辨率 ≥ 300 dpi；矢量 PDF 不套用 DPI 阈值
+- 图内文字在最终版面中 ≥ 9pt
 - 表使用 booktabs 风格，数字对齐
 - 图注/表注格式正确
 
@@ -145,7 +147,14 @@ Status: ✅ supported / ⚠️ needs evidence / ❌ contradicted
 
 ### 5.1 格式合规
 
-调用 `aaai-compliance-checker` skill 进行完整格式检查。写作过程中可用 `modules/compliance-quick.md` 做快速 10 项自查。
+使用仓库内置的确定性检查器进行源文件预检；不要依赖未随本仓库安装的外部 skill：
+
+```bash
+python scripts/aaai27_check.py paper.tex --stage anonymous \
+  --technical-appendix unknown --checklist unknown
+```
+
+检查前必须声明 `anonymous` 或 `camera-ready` 阶段，并尽可能提供具体 event 的页限、Technical Appendix 政策和 Checklist 提交方式。脚本未拿到 PDF、编译日志或最终打包文件时，会把相应维度标为 `NOT_CHECKED`，不能据此声称整篇完全合规。写作过程中可用 `modules/compliance-quick.md` 做快速自查。
 
 深度格式审查用 `modules/review/03-aaai-format-compliance.md`（8 类别 × AAAI 2027 专项，替代 paper-review 的 IEEE 格式检查）。
 
@@ -169,13 +178,13 @@ Status: ✅ supported / ⚠️ needs evidence / ❌ contradicted
 ```
 □ frenchspacing 已开启
 □ 无禁用包和命令
-□ 图均为 jpg/png/pdf，分辨率 ≥ 300 dpi
+□ 图均为 jpg/png/pdf；位图 ≥ 300 dpi，图中文字 ≥ 9pt
 □ 无 overfull boxes
 □ 无页码
 □ Abstract 无 \cite
 □ 参考文献格式正确（aaai2027.bst）
-□ 可重复性清单已填写
-□ 单 .tex 文件，ZIP ≤ 10 MB
+□ 若具体 event 要求：可重复性清单已按 embedded/separate 政策填写
+□ Camera-ready 打包时：单 .tex 文件及 ZIP 要求已按 event/Author Kit 核对
 □ 匿名投稿：PDF metadata 已清除
 ```
 
@@ -207,7 +216,7 @@ Status: ✅ supported / ⚠️ needs evidence / ❌ contradicted
 | `figure-design.md` | AAAI 图表设计与获奖案例 | Phase 3（Method/Experiments 写作时） |
 | `caption-writing.md` | AAAI 图注/表注写作规范：解剖结构 + 句法模板 + 病灶改写（图注与表注差异化） | Phase 3-4（图表定稿时） |
 | `self-review.md` | AAAI 特化自审清单（轻量版） | Phase 5 快速自查 |
-| `compliance-quick.md` | 10 项格式速查 | Phase 3-5（随时） |
+| `compliance-quick.md` | 分阶段格式速查 + 内置脚本用法 | Phase 3-5（随时） |
 
 ### AAAI 特化深度审查（`modules/review/`）
 
@@ -271,8 +280,8 @@ Status: ✅ supported / ⚠️ needs evidence / ❌ contradicted
   │     https://github.com/Master-cai/Research-Paper-Writing-Skills
   ├── paper-review → modules/self-review.md 的上游参考
   │     https://github.com/FanBroWell/AI-paper-reviewer
-  ├── aaai-compliance-checker → Phase 5 最终格式检查
-  │     https://github.com/FanBroWell/AI-paper-reviewer
+  ├── scripts/aaai27_check.py → Phase 5 确定性源文件预检
+  │     规则源：rules/aaai27-format-rules.json
   └── aaai-paper → 规范速查（保持不变，独立使用）
 ```
 
@@ -285,3 +294,4 @@ Status: ✅ supported / ⚠️ needs evidence / ❌ contradicted
 5. **每节自查**：写完一节立即自查，不要等全文写完再回头修
 6. **Claim 有据**：Phase 4 claim-evidence 映射中任何 unsupported claim 必须削弱或删除
 7. **用户主导**：写作方向和风格由用户决策；本 skill 提供结构化指导和规律参考，不替用户做学术判断
+8. **规则分层**：Author Kit 的通用要求、具体 event 政策和经验性写作建议必须分开标注；缺少 event 政策时输出 `NEEDS_POLICY`，缺少检查工件时输出 `NOT_CHECKED`

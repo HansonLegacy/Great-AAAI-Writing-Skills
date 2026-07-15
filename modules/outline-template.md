@@ -4,7 +4,9 @@
 
 ---
 
-## 一、通用页数预算（7 页正文）
+## 一、示例页数预算（仅用于 event 明确给出 7 页主文上限时）
+
+> AAAI 2027 Author Kit 不给出通用固定页数。先从具体 event 获取主文上限 `L`、References 是否计入以及其他计页政策；下表的 7 页数字只是可缩放的写作示例，不是 Author Kit 硬规则。Content Appendices 始终计入该 event 的适用主文页限。
 
 | 章节 | 推荐页数 | 说明 |
 |------|---------|------|
@@ -13,8 +15,8 @@
 | Method | 1.5-2.5 页 | 论文核心，按类型差异大 |
 | Experiments | 2.0-3.0 页 | 主体内容；模型/方法型取上限 |
 | Conclusion | 0.2-0.4 页 | 简洁收尾 |
-| References | 0.5-1.0 页 | 额外不计入 7 页限制 |
-| **合计正文** | **≤ 7.0 页** | |
+| References | 0.5-1.0 页 | 是否计入由具体 event 决定 |
+| **示例合计正文** | **≤ 7.0 页** | 仅当该 event 的 `L = 7` |
 
 ---
 
@@ -86,13 +88,13 @@
 \section{Conclusion}                            [0.2-0.4 页]
   % Summary + Limitations + Future work
 
-% --- 以下不计入 7 页正文 ---
+% --- 主体内容之后；是否计页必须按具体 event 判断 ---
 % Ethical Statement（如适用）
 % Acknowledgments
 % References
 ```
 
-**页数分布**：Intro 1.2 + Related Work 0.8 + Method 2.0 + Experiments 2.3 + Conclusion 0.3 ≈ **6.6 页**（接近上限，注意控制）。
+**页数分布示例（`L = 7`）**：Intro 1.2 + Related Work 0.8 + Method 2.0 + Experiments 2.3 + Conclusion 0.3 ≈ **6.6 页**（接近示例上限，注意控制）。
 
 ---
 
@@ -170,7 +172,7 @@
 
 生成大纲后逐项检查：
 
-- [ ] 正文 ≤ 7 页（各节预算加总 ≤ 7）
+- [ ] 已读取具体 event 页限 `L`，主文（含 Content Appendices）未超过 `L`
 - [ ] Abstract（单独环境，不计入各节页数）已规划
 - [ ] 每节有明确的 3-5 bullet 核心信息点
 - [ ] Method 的每个 subsection 可追溯到 Intro 的贡献 bullet
@@ -178,7 +180,7 @@
 - [ ] Teaser 图在第 1 页可见，Pipeline 图在 Method 开头
 - [ ] Related Work 与 Method/Experiments 不抢页数——控制在 1 页以内
 - [ ] Conclusion ≤ 0.5 页，不引入新信息
-- [ ] 章节顺序遵守 AAAI 规范（Abstract → 正文 → Ethical Statement → Acknowledgments → References）
+- [ ] 章节顺序遵守 AAAI 规范（Abstract → 正文 → [Content Appendices] → [Ethical Statement] → [Acknowledgments] → References）；会后 Technical/Supplement 与 Checklist 按 event 政策处理
 
 ---
 

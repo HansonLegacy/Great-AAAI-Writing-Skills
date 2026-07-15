@@ -14,10 +14,10 @@
 
 - 使用 `\usepackage[submission]{aaai2027}`
 - `\author{Anonymous Submission}`，`\affiliations{}` 留空
-- 不包含 links 块（code/dataset 链接会暴露身份）
-- 不包含 copyright 声明页脚
-- 参考文献中本人已发表工作需匿名化处理
-- 提交前用元数据清理工具清除 PDF metadata
+- `links` 块可以存在，但其中每个 URL 都必须是身份安全的匿名资源，不能指向个人、实验室或机构页面
+- 不手写 copyright、页眉、页脚或页码；submission 样式自动生成的审稿标识不属于违规
+- 已发表的本人工作按普通第三人称完整引用，不把作者名伪造为 “Anonymous”；仅移除会直接识别本次投稿的表述或非匿名资源
+- 提交前检查 PDF metadata，清除 `/Author`、身份化 `/Title` 等字段；通用的 Creator/Producer 工具字段本身不是身份泄露
 
 # Task
 对用户提供的 paper（LaTeX 源 + 编译 PDF）按以下 10 类扫描：
@@ -40,18 +40,20 @@
 - Personal GitHub
 - Personal homepage
 - Lab homepage
+- 非匿名项目页、数据仓库或带组织身份的重定向链接
+- 匿名托管且无法反推出作者身份的 code/data 链接可以保留；必须逐链接人工核查，不能因出现 `links` 块而直接失败
 
 ## 类别 5: 自引用与历史工作
 - "Our previous work [X]" → 应改 "Prior work [X]"
 - "Building on our framework Y" → 应改 "Building on Y"
-- 自引占比 > 30% → 间接暴露
+- 已发表自引保留完整、准确的参考文献信息，并按第三人称讨论
 
 ## 类别 6: 致谢 / Funding
 - Acknowledgments 段应为空或占位（"Acknowledgments will be added after acceptance"）或在匿名投稿中省略
 - 不含 "Supported by NSFC / NIH / NSF grant XXX"
 
 ## 类别 7: 文件 / 图像 Metadata
-- PDF Author / Creator / Producer 字段为空
+- PDF `/Author`、身份化 `/Title` 等字段不含作者或机构信息；不要把通用 Creator/Producer 字段误判为泄露
 - PNG / JPG EXIF 清空
 - LaTeX 注释中无 "% Author's private note"
 
@@ -59,15 +61,14 @@
 - [ ] `\usepackage[submission]{aaai2027}`（非 `\usepackage{aaai2027}`）？
 - [ ] `\author{Anonymous Submission}`？
 - [ ] `\affiliations{}` 为空？
-- [ ] 无 `links` 块？
-- [ ] 无 copyright 声明页脚？
+- [ ] `links` 块（若有）中的每个 URL 均经过身份安全核查？
+- [ ] 无作者手写的 copyright、页眉、页脚或页码？
 - [ ] 无 `\nocopyright` 命令？
 
 ## 类别 9: AAAI 特有 — 内容泄露
 - [ ] Teaser 图无机构 logo/名称/识别性信息？
 - [ ] 图/表中无真实数据来源的识别性信息（如合作医院名称）？
-- [ ] 不写 "Code will be released at [链接]"？
-- [ ] 不写 "Data available at [链接]"？
+- [ ] code/data 链接为匿名资源，且页面、账号、提交历史和重定向均不泄露身份？
 - [ ] Acknowledgments 不点名具体人名/项目名？
 
 ## 类别 10: 语言学特征（高级）
@@ -98,8 +99,8 @@ AAAI 2027 双盲扫描报告:🟢 / 🟡 / 🟠 / 🔴
 | `\usepackage[submission]{aaai2027}` | ✅/❌ |
 | `\author{Anonymous Submission}` | ✅/❌ |
 | `\affiliations{}` 为空 | ✅/❌ |
-| 无 links 块 | ✅/❌ |
-| 无 copyright 声明 | ✅/❌ |
+| links（若有）逐项身份安全 | ✅/❌/N/A |
+| 无作者自定义 copyright/header/footer/page number | ✅/❌ |
 
 ## 修复脚本（LaTeX）
 [直接可替换的 latex diff]
@@ -124,13 +125,11 @@ find . -name "Thumbs.db" -delete
 # AAAI 双盲铁律
 
 1. `\author{Anonymous Submission}` + `\affiliations{}` 空 = 底线
-2. 任何 personal GitHub / homepage link → 🔴
+2. Personal GitHub / homepage / lab link → 🔴；身份安全的匿名链接可保留
 3. 任何 "our previous work" → 🔴（改第三人称）
-4. 任何中文标点 / 双语 → 🔴
-5. PDF metadata 清空 = 投稿前 24h 必做
-6. Teaser 图无机构 logo/名称
-7. 不用 links 块（匿名投稿不允许）
-```
+4. PDF metadata 中不得含作者或机构身份；通用工具字段不作误报
+5. Teaser 图无机构 logo/名称
+6. 已发表自引按第三人称正常引用，不伪造参考文献作者
 
 ---
 
@@ -149,7 +148,7 @@ grep -rn -E "(/Users/|/home/|C:\\\\)" --include="*.tex" . 2>/dev/null
 echo "===== [3] 自引用第一人称 ====="
 grep -rni -E "(our previous|our prior|we previously|in our|in \[ours\])" --include="*.tex" . 2>/dev/null
 
-echo "===== [4] links 块 ====="
+echo "===== [4] links 块（命中后逐 URL 做身份核查；不是自动失败） ====="
 grep -rni '\\section\*\{links\}' --include="*.tex" . 2>/dev/null
 
 echo "===== [5] 代码链接 ====="
@@ -162,7 +161,7 @@ echo "===== [7] PDF metadata ====="
 for pdf in *.pdf; do
   [ -f "$pdf" ] || continue
   echo "--- $pdf ---"
-  pdfinfo "$pdf" 2>/dev/null | grep -iE "(Author|Creator|Producer)"
+  pdfinfo "$pdf" 2>/dev/null | grep -iE "^(Author|Title|Subject|Keywords)"
 done
 
 echo "===== [8] 检查 \\author{} ====="

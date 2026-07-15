@@ -63,7 +63,7 @@ Abstract (理论型五步弧线):
   ⑤ Significance: This shows FTRL is theoretically more efficient than previously believed
      under bandit feedback, without any algorithmic modification.
 
-章节大纲 (7 页预算):
+章节大纲（示例假设具体 event 给出 7 页主文预算；请按目标 event 调整）:
   1. Introduction           (~1.0 页)
   2. Related Work           (~0.7 页) — Online convex optimization / Bandit feedback / FTRL
   3. Preliminaries          (~1.0 页) — Online learning setup / FTRL / Bandit feedback model

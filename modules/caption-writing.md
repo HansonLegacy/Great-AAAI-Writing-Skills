@@ -3,6 +3,7 @@
 > 图注（figure caption）和表注（table caption）是 reviewer 阅读路径上的关键节点——reviewer 通常先扫图/表再读正文。
 > 一个自包含、信息丰富的 caption 可以让 reviewer 在 15 秒内理解你的贡献，而不需要回头翻正文。
 > 本模块教**怎么写 `\caption{...}` 里的文字**，与 `figure-design.md`（教怎么设计图/表本身）和 `sentence-craft.md` §三 Group 13（教怎么在正文中引用图表）互补。
+> `caption`/AAAI 样式会自动生成 “Figure N:” 或 “Table N:” 前缀；`\caption{...}` 的正文不得再手写该前缀。本文所有 caption 示例都只展示花括号内应填写的文字。
 
 ---
 
@@ -25,7 +26,7 @@
 | | 场景 A：Caption 写法 | 场景 B：正文引用句写法 |
 |---|---|---|
 | **是什么** | `\caption{...}` 里的文字——Figure 1 / Table 1 下方的标题说明 | 正文段落里引用图/表的句子 |
-| **例子** | `Figure 1: NAME's three-stage pipeline. The encoder (left)...` | "As shown in Figure 1, NAME outperforms baselines by 3-5%." |
+| **例子** | `NAME's three-stage pipeline. The encoder (left)...` | "As shown in Figure 1, NAME outperforms baselines by 3-5%." |
 | **谁读** | 先扫图/表的 reviewer（可能还没读正文） | 正在读正文的 reviewer |
 | **自包含要求** | **必须**自包含——reviewer 可能不看正文只看图 | 不需要自包含——上下文由正文段落提供 |
 | **指导文件** | **本文件** | `sentence-craft.md` §三 第 13 组 |
@@ -44,8 +45,8 @@
 
 | **Before**（非自包含） | **After**（自包含） |
 |---|---|
-| `Figure 1: Overview of our proposed method.` | `Figure 1: NAME's three-stage pipeline. Stage 1 (left) extracts multi-scale features from input images. Stage 2 (center) fuses cross-modal representations via lightweight adaptors. Stage 3 (right) produces the final segmentation mask. Dashed arrows denote training-only data flow.` |
-| `Table 1: Main results.` | `Table 1: Image classification accuracy (%) on ImageNet-1K and CIFAR-100. We report top-1 and top-5 accuracy. Best results in \textbf{bold}, second-best \underline{underlined}. NAME denotes our method.` |
+| `Overview of our proposed method.` | `NAME's three-stage pipeline. Stage 1 (left) extracts multi-scale features from input images. Stage 2 (center) fuses cross-modal representations via lightweight adaptors. Stage 3 (right) produces the final segmentation mask. Dashed arrows denote training-only data flow.` |
+| `Main results.` | `Image classification accuracy (%) on ImageNet-1K and CIFAR-100. We report top-1 and top-5 accuracy. Best results in \textbf{bold}, second-best \underline{underlined}. NAME denotes our method.` |
 
 ### 2.2 第一句承重原则（First-Sentence Weight）
 
@@ -74,7 +75,7 @@
 **示例**（架构/Pipeline 图）：
 
 ```
-Figure 1: NAME's three-stage pipeline for cross-modal alignment.
+NAME's three-stage pipeline for cross-modal alignment.
 The encoder (left) extracts multi-scale visual features from input images.
 The fusion module (center) aligns visual and textual representations via cross-attention.
 The decoder (right) generates the final segmentation mask.
@@ -93,7 +94,7 @@ Note that the auxiliary classifier (gray block, top-right) is only active during
 **示例**（主结果表）：
 
 ```
-Table 1: Image classification accuracy (%) on ImageNet-1K, CIFAR-100, and CIFAR-10.
+Image classification accuracy (%) on ImageNet-1K, CIFAR-100, and CIFAR-10.
 We report top-1 accuracy (↑) and top-5 accuracy (↑).
 Best results in \textbf{bold}, second-best \underline{underlined}. NAME denotes our method.
 NAME consistently outperforms all baselines across datasets, with the largest margin (3.7%) on ImageNet-1K.
@@ -117,7 +118,7 @@ NAME consistently outperforms all baselines across datasets, with the largest ma
 **适用**：Method 段的 pipeline figure，展示模型的模块组成和数据流。
 
 ```
-Figure [N]: [NAME]'s [N]-stage [ARCHITECTURE_TYPE].
+[NAME]'s [N]-stage [ARCHITECTURE_TYPE].
 [MODULE_A] ([position]) [VERB]s [INPUT] to produce [OUTPUT].
 [MODULE_B] ([position]) [VERB]s [FUNCTION].
 [MODULE_C] ([position]) generates [FINAL_OUTPUT].
@@ -125,7 +126,7 @@ Figure [N]: [NAME]'s [N]-stage [ARCHITECTURE_TYPE].
 ```
 
 > **示例**：\
-> `Figure 2: LLM2CLIP's two-stage fine-tuning framework. The LLM-to-CLIP embedding module (left) converts LLM representations into CLIP-compatible embeddings. The lightweight adaptor (center) couples the embeddings to the pretrained CLIP vision encoder via cross-attention. The adapted CLIP (right) produces the final cross-modal representation. Dashed blocks denote frozen parameters; solid blocks are trainable.`\
+> `LLM2CLIP's two-stage fine-tuning framework. The LLM-to-CLIP embedding module (left) converts LLM representations into CLIP-compatible embeddings. The lightweight adaptor (center) couples the embeddings to the pretrained CLIP vision encoder via cross-attention. The adapted CLIP (right) produces the final cross-modal representation. Dashed blocks denote frozen parameters; solid blocks are trainable.`\
 > *（结构参考 LLM2CLIP 2026 的 pipeline 描述）*
 
 ### 4.2 对比/结果图
@@ -133,27 +134,27 @@ Figure [N]: [NAME]'s [N]-stage [ARCHITECTURE_TYPE].
 **适用**：Experiments 段的结果可视化（准确率曲线、分布图、注意力热力图等）。
 
 ```
-Figure [N]: [WHAT_IS_VISUALIZED] on [DATASET].
+[WHAT_IS_VISUALIZED] on [DATASET].
 [METHOD] ([color/style]) shows [CHARACTERISTIC] compared to [BASELINE_1] ([color/style]) and [BASELINE_2] ([color/style]).
 [KEY_OBSERVATION: Note that...].
 ```
 
 > **示例**：\
-> `Figure 3: t-SNE visualization of learned representations on CIFAR-100 test set. NAME (red) produces more compact and well-separated clusters compared to the strongest baseline EVA02 (blue) and the vanilla ViT (gray). Note that NAME's clusters exhibit clearer class boundaries (highlighted regions), consistent with the 3.7% top-1 gain in Table 1.`
+> `t-SNE visualization of learned representations on CIFAR-100 test set. NAME (red) produces more compact and well-separated clusters compared to the strongest baseline EVA02 (blue) and the vanilla ViT (gray). Note that NAME's clusters exhibit clearer class boundaries (highlighted regions), consistent with the 3.7% top-1 gain in Table 1.`
 
 ### 4.3 概念/Teaser 图
 
 **适用**：Introduction 的 teaser figure（Fig. 1），展示核心思想和问题-方案对比。
 
 ```
-Figure [N]: [PROBLEM_SCENARIO] vs. [OUR_APPROACH].
+[PROBLEM_SCENARIO] vs. [OUR_APPROACH].
 Left: [WHAT_EXISTING_METHODS_DO], which leads to [FAILURE_MODE].
 Right: [NAME] [KEY_MECHANISM] to achieve [DESIRED_OUTCOME].
 [COLOR/STYLE CONVENTIONS].
 ```
 
 > **示例**：\
-> `Figure 1: Existing one-shot tuning methods vs. NAME (ours). Left: Standard fine-tuning updates all parameters, causing catastrophic forgetting of pretrained knowledge. Right: NAME freezes the backbone (gray) and inserts lightweight adaptors (orange) at each layer, preserving pretrained representations while learning task-specific mappings. Orange blocks denote trainable parameters; gray blocks are frozen.`\
+> `Existing one-shot tuning methods vs. NAME (ours). Left: Standard fine-tuning updates all parameters, causing catastrophic forgetting of pretrained knowledge. Right: NAME freezes the backbone (gray) and inserts lightweight adaptors (orange) at each layer, preserving pretrained representations while learning task-specific mappings. Orange blocks denote trainable parameters; gray blocks are frozen.`\
 > *（结构参考 MaskBooster 2025 / CowClip 2023 的 teaser 设计）*
 
 ---
@@ -165,54 +166,54 @@ Right: [NAME] [KEY_MECHANISM] to achieve [DESIRED_OUTCOME].
 **适用**：Experiments 段的主对比表（SOTA comparison）。
 
 ```
-Table [N]: [TASK] results on [DATASET(S)].
+[TASK] results on [DATASET(S)].
 We report [METRIC_1] (↑/↓) [, [METRIC_2] (↑/↓)].
 Best results in \textbf{bold}, second-best \underline{underlined}.
 [NAME] denotes our [method/model].
 ```
 
 > **示例**：\
-> `Table 1: Image classification accuracy (%) on ImageNet-1K validation set. We report top-1 accuracy (↑) and top-5 accuracy (↑). Best results in \textbf{bold}, second-best \underline{underlined}. NAME is our full model. † denotes methods using extra training data.`
+> `Image classification accuracy (%) on ImageNet-1K validation set. We report top-1 accuracy (↑) and top-5 accuracy (↑). Best results in \textbf{bold}, second-best \underline{underlined}. NAME is our full model. † denotes methods using extra training data.`
 
 ### 5.2 消融表
 
 **适用**：Method/Experiments 段的消融实验表。
 
 ```
-Table [N]: Ablation study on [DATASET].
+Ablation study on [DATASET].
 Each row removes one component from [FULL_MODEL_NAME] (Row 1).
 We report [METRIC_1] [and METRIC_2]. Δ denotes the absolute degradation from the full model.
 ```
 
 > **示例**：\
-> `Table 3: Ablation study on CIFAR-100. Each row removes one component from NAME (Row 1). We report top-1 accuracy (%). Δ denotes the absolute degradation from the full model. Row 5 (w/o adaptor) incurs the largest drop (2.8%), confirming the adaptor as the most critical component.`
+> `Ablation study on CIFAR-100. Each row removes one component from NAME (Row 1). We report top-1 accuracy (%). Δ denotes the absolute degradation from the full model. Row 5 (w/o adaptor) incurs the largest drop (2.8%), confirming the adaptor as the most critical component.`
 
 ### 5.3 对比/分析表
 
 **适用**：效率对比、超参数敏感性、不同配置下的性能分析。
 
 ```
-Table [N]: [ANALYSIS_TYPE] of [NAME] under [CONDITIONS/VARIATIONS].
+[ANALYSIS_TYPE] of [NAME] under [CONDITIONS/VARIATIONS].
 We report [METRICS] across [N] [configurations/datasets/settings].
 [CONVENTIONS: what is being varied, what is fixed].
 ```
 
 > **示例**：\
-> `Table 4: Inference latency (ms) and GPU memory (GB) on a single V100. We compare NAME against three baselines at batch sizes {1, 4, 16}. Latency is averaged over 100 forward passes. NAME achieves the lowest latency at all batch sizes with ≤ 10% memory overhead.`
+> `Inference latency (ms) and GPU memory (GB) on a single V100. We compare NAME against three baselines at batch sizes {1, 4, 16}. Latency is averaged over 100 forward passes. NAME achieves the lowest latency at all batch sizes with ≤ 10% memory overhead.`
 
 ### 5.4 基准/资源表（数据集统计表）
 
 **适用**：Benchmark/Resource 型论文的数据集统计表。
 
 ```
-Table [N]: [DATASET_NAME] statistics compared to existing [RESOURCE_TYPE].
+[DATASET_NAME] statistics compared to existing [RESOURCE_TYPE].
 [NAME] contains [N] samples across [K] [categories/classes/tasks],
 [X]× larger than [LARGEST_EXISTING] in terms of [DIMENSION].
 [ADDITIONAL_DIMENSIONS].
 ```
 
 > **示例**：\
-> `Table 1: Statistics of PlantTraitNet-100K compared to existing plant trait datasets. PlantTraitNet-100K contains 103,247 images across 1,284 species, 4.2× larger than the largest existing dataset TRY in terms of image count, and uniquely provides citizen-science geolocation metadata for each sample.`\
+> `Statistics of PlantTraitNet-100K compared to existing plant trait datasets. PlantTraitNet-100K contains 103,247 images across 1,284 species, 4.2× larger than the largest existing dataset TRY in terms of image count, and uniquely provides citizen-science geolocation metadata for each sample.`\
 > *（结构参考 PlantTraitNet 2026 的数据集描述）*
 
 ---
@@ -224,8 +225,8 @@ Table [N]: [DATASET_NAME] statistics compared to existing [RESOURCE_TYPE].
 | | 内容 |
 |------|------|
 | **病灶** | Caption 只说了图的名称，没说图的内容——reviewer 被迫读正文才能理解 |
-| **Before** | `Figure 1: Overview of the proposed framework.` |
-| **After** | `Figure 1: NAME's end-to-end framework for multi-modal fusion. The encoder (left) extracts modality-specific features. The gated fusion module (center) selectively combines features via learned gating weights. The task-specific heads (right) produce final predictions for classification and segmentation.` |
+| **Before** | `Overview of the proposed framework.` |
+| **After** | `NAME's end-to-end framework for multi-modal fusion. The encoder (left) extracts modality-specific features. The gated fusion module (center) selectively combines features via learned gating weights. The task-specific heads (right) produce final predictions for classification and segmentation.` |
 | **改了什么** | `Overview of the proposed framework` → 方法名 + 三阶段 + 各模块功能 + 各模块位置 |
 
 ### 第 2 组："Overview of our method" → 具体架构描述
@@ -233,8 +234,8 @@ Table [N]: [DATASET_NAME] statistics compared to existing [RESOURCE_TYPE].
 | | 内容 |
 |------|------|
 | **病灶** | 图注用 "overview" 这个词——它是 AAAI caption 中最泛滥的无信息词 |
-| **Before** | `Figure 2: Overview of our method. (a) Feature extraction. (b) Cross-modal fusion. (c) Prediction.` |
-| **After** | `Figure 2: NAME's three-module architecture. (a) Feature extraction: a ViT-B/16 backbone produces patch-level visual tokens. (b) Cross-modal fusion: a 2-layer transformer aligns visual tokens with text embeddings via cross-attention. (c) Prediction: an MLP head maps fused tokens to class logits.` |
+| **Before** | `Overview of our method. (a) Feature extraction. (b) Cross-modal fusion. (c) Prediction.` |
+| **After** | `NAME's three-module architecture. (a) Feature extraction: a ViT-B/16 backbone produces patch-level visual tokens. (b) Cross-modal fusion: a 2-layer transformer aligns visual tokens with text embeddings via cross-attention. (c) Prediction: an MLP head maps fused tokens to class logits.` |
 | **改了什么** | `Overview of our method` → 方法名 + 每个子图不仅说"是什么"还说"怎么做的" |
 
 ### 第 3 组："Experimental results" → 任务 + 指标 + 格式约定
@@ -242,8 +243,8 @@ Table [N]: [DATASET_NAME] statistics compared to existing [RESOURCE_TYPE].
 | | 内容 |
 |------|------|
 | **病灶** | 表注只说数据集名，不说任务、指标、格式约定——reviewer 看不懂表里的数字 |
-| **Before** | `Table 1: Experimental results on CIFAR-10 and CIFAR-100.` |
-| **After** | `Table 1: Image classification accuracy (%) on CIFAR-10 and CIFAR-100. We report top-1 accuracy (↑). Best results in \textbf{bold}, second-best \underline{underlined}. NAME denotes our full model.` |
+| **Before** | `Experimental results on CIFAR-10 and CIFAR-100.` |
+| **After** | `Image classification accuracy (%) on CIFAR-10 and CIFAR-100. We report top-1 accuracy (↑). Best results in \textbf{bold}, second-best \underline{underlined}. NAME denotes our full model.` |
 | **改了什么** | 加了任务类型（image classification）、指标名 + 方向（top-1 ↑）、粗体/下划线约定、方法标记 |
 
 ### 第 4 组：表注缺失格式约定
@@ -251,8 +252,8 @@ Table [N]: [DATASET_NAME] statistics compared to existing [RESOURCE_TYPE].
 | | 内容 |
 |------|------|
 | **病灶** | 表里用了粗体和下划线标注最优/次优值，但 caption 里没解释——reviewer 得猜 |
-| **Before** | `Table 2: Comparison with state-of-the-art methods on COCO object detection.` |
-| **After** | `Table 2: Object detection results on COCO val2017. We report mAP (%), AP50 (%), and AP75 (%). Best results in \textbf{bold}, second-best \underline{underlined}. NAME is our method. † denotes methods using additional detection data.` |
+| **Before** | `Comparison with state-of-the-art methods on COCO object detection.` |
+| **After** | `Object detection results on COCO val2017. We report mAP (%), AP50 (%), and AP75 (%). Best results in \textbf{bold}, second-best \underline{underlined}. NAME is our method. † denotes methods using additional detection data.` |
 | **改了什么** | 加了三个要素：①指标 + 方向、②粗体/下划线约定、③特殊符号定义（†） |
 
 ### 第 5 组：图注过于冗长 → 精炼关键信息
@@ -260,8 +261,8 @@ Table [N]: [DATASET_NAME] statistics compared to existing [RESOURCE_TYPE].
 | | 内容 |
 |------|------|
 | **病灶** | 图注变成了 Method 段的复读机——5 句以上的 caption 吓跑 reviewer |
-| **Before** | `Figure 1: Our proposed NAME framework consists of four main components. First, the input images are passed through a ResNet-50 backbone pretrained on ImageNet-21K to extract 2048-dimensional feature vectors. These features are then fed into a multi-head self-attention module with 8 heads and a hidden dimension of 512...`（继续 ~80 词） |
-| **After** | `Figure 1: NAME framework. Input images → ResNet-50 backbone → multi-head self-attention (8 heads, d=512) → classification head. Dashed arrows denote training-only paths. See §3.1 for architectural details.` |
+| **Before** | `Our proposed NAME framework consists of four main components. First, the input images are passed through a ResNet-50 backbone pretrained on ImageNet-21K to extract 2048-dimensional feature vectors. These features are then fed into a multi-head self-attention module with 8 heads and a hidden dimension of 512...`（继续 ~80 词） |
+| **After** | `NAME framework. Input images → ResNet-50 backbone → multi-head self-attention (8 heads, d=512) → classification head. Dashed arrows denote training-only paths. See §3.1 for architectural details.` |
 | **改了什么** | 删掉可以在 §3.1 读到的细节；保留核心数据流 + 视觉约定；用 `→` 压缩空间 |
 
 ### 第 6 组：图注缺失观察引导
@@ -269,8 +270,8 @@ Table [N]: [DATASET_NAME] statistics compared to existing [RESOURCE_TYPE].
 | | 内容 |
 |------|------|
 | **病灶** | Caption 描述了图里有什么，但没告诉 reviewer **应该注意到什么** |
-| **Before** | `Figure 4: Attention maps from the last layer of NAME on sample images from COCO. Warmer colors indicate higher attention weights.` |
-| **After** | `Figure 4: Attention maps from the last layer of NAME on COCO samples. Warmer colors indicate higher attention weights. Note that NAME attends to the full object extent (highlighted by red bounding boxes) rather than discriminative parts only, consistent with its improved segmentation performance in Table 2.` |
+| **Before** | `Attention maps from the last layer of NAME on sample images from COCO. Warmer colors indicate higher attention weights.` |
+| **After** | `Attention maps from the last layer of NAME on COCO samples. Warmer colors indicate higher attention weights. Note that NAME attends to the full object extent (highlighted by red bounding boxes) rather than discriminative parts only, consistent with its improved segmentation performance in Table 2.` |
 | **改了什么** | 加了 `Note that...` 观察引导——告诉 reviewer 看什么、这个观察如何与定量结果一致 |
 
 ### 第 7 组：非自包含——依赖正文定义
@@ -278,8 +279,8 @@ Table [N]: [DATASET_NAME] statistics compared to existing [RESOURCE_TYPE].
 | | 内容 |
 |------|------|
 | **病灶** | Caption 使用了只在正文中定义的术语/缩写——reviewer 扫图时看不懂 |
-| **Before** | `Figure 3: The GAM module's internal structure. H_Q, H_K, H_V denote the projected representations.` |
-| **After** | `Figure 3: Internal structure of the Gated Attention Module (GAM, the green block in Figure 2). Query (H_Q), key (H_K), and value (H_V) projections are computed from the input features before the gating mechanism selects informative attention heads.` |
+| **Before** | `The GAM module's internal structure. H_Q, H_K, H_V denote the projected representations.` |
+| **After** | `Internal structure of the Gated Attention Module (GAM, the green block in Figure 2). Query (H_Q), key (H_K), and value (H_V) projections are computed from the input features before the gating mechanism selects informative attention heads.` |
 | **改了什么** | ①展开了 GAM 全称 + 在图 2 中的位置；②解释了 H_Q/H_K/H_V 是什么（不只是命名） |
 
 ### 第 8 组：表注写成正文句 → 适合 standalone 阅读
@@ -287,8 +288,8 @@ Table [N]: [DATASET_NAME] statistics compared to existing [RESOURCE_TYPE].
 | | 内容 |
 |------|------|
 | **病灶** | 表注写得像正文里的分析句——不独立、缺乏表格阅读所需的元信息 |
-| **Before** | `Table 5: As can be seen from the table, our method consistently outperforms all baselines across the three evaluated benchmarks, with particularly large gains on the most challenging long-tailed split.` |
-| **After** | `Table 5: Classification accuracy (%) on three long-tailed benchmarks: ImageNet-LT, iNaturalist 2018, and Places-LT. We report top-1 accuracy (↑). Best results in \textbf{bold}, second-best \underline{underlined}. NAME is our method. NAME achieves the largest gains on the most challenging setting (ImageNet-LT, 3.7% over the strongest baseline).` |
+| **Before** | `As can be seen from the table, our method consistently outperforms all baselines across the three evaluated benchmarks, with particularly large gains on the most challenging long-tailed split.` |
+| **After** | `Classification accuracy (%) on three long-tailed benchmarks: ImageNet-LT, iNaturalist 2018, and Places-LT. We report top-1 accuracy (↑). Best results in \textbf{bold}, second-best \underline{underlined}. NAME is our method. NAME achieves the largest gains on the most challenging setting (ImageNet-LT, 3.7% over the strongest baseline).` |
 | **改了什么** | `As can be seen from the table` → 删；加了任务 + 数据集 + 指标 + 格式约定；末句给关键发现时才带具体数字 |
 
 ---

@@ -15,7 +15,7 @@
 ## 〇、审查工作流
 
 ```
-Step 1: 先运行 aaai-compliance-checker（格式硬伤先排除）
+Step 1: 先运行 python scripts/aaai27_check.py ...（格式硬伤先排除）
 Step 2: 轻量自查 → 用本文档五维度框架快速过一遍
 Step 3: 深度审查 → 用 modules/review/00-aaai-master-workflow.md 逐段详细审
 Step 4: 专项检查 → 按需加载 review/01-05 对应 prompt
@@ -58,15 +58,15 @@ Step 5: 生成自审报告（🔴/🟠/🟡/🟢 四级）
 | 公式有使命？ | 每个公式在正文中被引用和解释 |
 | Abstract 无 `\cite`？ | ✅ |
 
-### [D] 格式合规（Desk Reject 防线）
+### [D] 格式合规（硬性规则防线）
 
-详见 `aaai-compliance-checker`，此处仅列最高频的 5 个 format-killer：
+详见 `modules/review/03-aaai-format-compliance.md` 与 `scripts/aaai27_check.py`。此处仅列最高频的 5 个错误；最终后果取决于官方措辞和具体 event 政策，不统一宣称 “desk reject”：
 
 | # | 检查项 | 风险 |
 |---|--------|------|
-| 1 | 无禁用包（geometry, titlesec, authblk...） | 🔴 Desk reject |
-| 2 | 无禁用命令（\newpage, \clearpage, \vspace{-...}） | 🔴 Desk reject |
-| 3 | 纸张为 US Letter | 🔴 Desk reject |
+| 1 | 无禁用包（geometry, titlesec, authblk...） | 🔴 ERROR |
+| 2 | 无禁用命令；断页命令按阶段判断 | 🔴 ERROR / 阶段相关 |
+| 3 | 纸张为 US Letter | 🔴 ERROR |
 | 4 | frenchspacing 已开启 | 🟠 格式退回 |
 | 5 | 无页码 | 🟠 格式退回 |
 
@@ -74,9 +74,9 @@ Step 5: 生成自审报告（🔴/🟠/🟡/🟢 四级）
 
 | 检查项 | 通过标准 |
 |--------|---------|
-| PDF metadata 无作者信息？ | 已清理 |
-| 无 "In our previous work..."？ | 自引匿名化 |
-| 无 links 块包含识别性链接？ | 匿名投稿不允许 links 块 |
+| PDF metadata 无作者/机构身份信息？ | 已清理身份字段；通用 Creator/Producer 不误报 |
+| 无 "In our previous work..."？ | 已发表自引按第三人称正常引用，不伪造参考文献 |
+| links 块（若有）是否身份安全？ | 匿名资源可用；个人/机构链接不可用 |
 | Teaser 图无机构 logo/名称？ | ✅ |
 | Acknowledgments 留空或占位？ | 匿名投稿不写致谢 |
 | Ethical Statement 已填写（如适用）？ | ✅ |
@@ -153,7 +153,7 @@ Total claims: N
 ❌ Contradicted: N
 
 === Format Compliance ===
-aaai-compliance-checker output: [PASS / FAIL with N issues]
+scripts/aaai27_check.py output: [ERROR / WARNING / NEEDS_POLICY / NOT_CHECKED / scoped PASS]
 
 === Overall Readiness ===
 [Ready to submit / Ready after fixing MAJOR items / Needs significant revision]

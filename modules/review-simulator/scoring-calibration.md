@@ -92,7 +92,7 @@
 ### Reject
 - Q1：贡献缺失——"so what?" 没有答案
 - OR Q2：实验有致命缺陷（数字矛盾、cherry-pick 明显、baseline 完全不公平）
-- OR Q4：Desk reject（禁用包/超页/双盲违规）
+- OR Q4：存在明确格式 `ERROR` 或双盲泄露（具体程序后果不得由本 skill 臆测）
 
 ---
 

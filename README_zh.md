@@ -21,7 +21,8 @@
 **Great AAAI Writing Skills** is a Claude Code / Codex CLI skill purpose-built for AAAI 2027 paper writing.
 
 - 📄 **50 AAAI award-winning papers distilled** — writing patterns from AAAI 2023–2026 Oral, Distinguished, and Best Paper winners systematically extracted into reusable templates, sentence patterns, and strategies
-- 📋 **Full 2027 format compliance** — every AAAI 2027 Author Kit constraint (forbidden packages, double-blind requirements, page limits, reproducibility checklist) baked into automated checks
+- 📋 **Layered 2027 format checks** — separates Author Kit rules, event-specific policy, and human-only checks;
+  source-verifiable rules are automated, while missing PDF/log/package artifacts are reported as `NOT_CHECKED`
 - 🧠 **Not a one-click generator** — it won't write your paper for you, but it gives you evidence-backed, sentence-level, actionable guidance at every stage
 
 Describe your research. The skill handles orchestration, templates, self-checks, and review simulation.
@@ -78,9 +79,17 @@ You also get access to **65+ red-flag trigger words** (with regex-ready patterns
 
 > *"Is my paper.tex compliant with the AAAI 2027 Author Kit?"*
 
-The **format compliance module** scans for **25+ forbidden packages** (`geometry`, `titlesec`, `ulem`, `fullpage`, `hyperref`...) and **20+ forbidden commands** (`\newpage`, `\clearpage`, `\tiny`, `\resizebox`, `\vspace{-`...). Also checks: US Letter paper size, abstract citations, page numbers, section ordering, figure format, and double-blind violations.
+The built-in checker uses explicit `anonymous` / `camera-ready` profiles to inspect forbidden packages and commands,
+active preamble declarations, abstract citations, section order, `\input` use, and the boundaries among content appendices,
+technical appendices, and the reproducibility checklist. Page limits and supplementary-material policy come from the target event;
+identity-safe anonymous `links` are not blanket-rejected.
 
-Works on **macOS, Linux, and Windows** — both bash and PowerShell commands included.
+```bash
+python scripts/aaai27_check.py paper.tex --stage anonymous \
+  --technical-appendix unknown --checklist unknown
+```
+
+Works on **macOS, Linux, and Windows**. Source checks do not replace PDF or final-package inspection; unavailable artifacts remain `NOT_CHECKED`.
 
 ### ✍️ Polish Your Sentences
 
@@ -153,10 +162,14 @@ Great-AAAI-Writing-Skills/
 │   ├── distilled-patterns.md Quantitative benchmarks from 50 papers
 │   ├── paper-taxonomy.md     4-type classification + strategy
 │   ├── outline-template.md   Page budget + section plan
-│   ├── compliance-quick.md   10-item format checklist
-│   ├── review/               5-module deep review (AAAI 2027-specific)
+│   ├── compliance-quick.md   Stage-aware format quick check
+│   ├── review/               6-module deep review (AAAI 2027-specific)
 │   ├── review-simulator/     PC-member view: scoring + Q&A + rebuttal
 │   └── paper-corpus/         50 award-winning paper abstracts + analysis
+│
+├── rules/                    Machine-readable AAAI-27 rule registry
+├── scripts/                  Stage-aware deterministic format checker
+├── tests/                    Checker regression tests
 │
 └── paper-types/              Type-specific injection layer
     ├── theory.md             ├── model-method.md
