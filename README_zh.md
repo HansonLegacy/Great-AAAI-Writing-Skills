@@ -5,6 +5,7 @@
 <div align="center">
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg?color=blue)](LICENSE)
+[![Version: 1.0.2](https://img.shields.io/badge/version-1.0.2-2ea44f.svg)](CHANGELOG.md)
 [![Claude Code](https://img.shields.io/badge/Claude%20Code-Skill-6C3C99?color=6C3C99)](https://claude.ai/code)
 [![Codex CLI](https://img.shields.io/badge/Codex-CLI-000000?color=000000)](https://github.com/openai/codex)
 [![AAAI 2027](https://img.shields.io/badge/AAAI-2027-1a5276?color=1a5276)](https://aaai.org/conference/aaai/aaai-27/)
@@ -71,7 +72,11 @@ Drop in a draft of any section. The skill loads the corresponding module (`secti
 
 > *"Review my full paper as if you were an AAAI PC member."*
 
-The built-in **review simulator** scores your paper across **7 dimensions** (significance, novelty, soundness, clarity, experiments, related work, reproducibility) with **calibrated scoring** based on real AAAI acceptance thresholds. It outputs a structured review report — reviewer questions, weakness flags, and rebuttal strategies.
+The built-in **review simulator** produces an evidence-backed **0–6 Scientific Overall Score** across seven dimensions:
+significance, novelty, soundness, evidence, clarity, related work, and reproducibility. It also reports an independent **0–5 Assessment Confidence**.
+Paper-type weights, missing-information handling, scientific gates, and recommendation bands are reproducible; format and anonymity statuses remain separate.
+This is a diagnostic simulation, not an official AAAI scale or acceptance probability.
+Every report ends with a fixed two-line footer containing the Final Overall Score and Assessment Confidence.
 
 You also get access to **65+ red-flag trigger words** (with regex-ready patterns) that reviewers commonly flag: `"novel"`, `"first to"`, `"significantly outperforms"`, `"extensive experiments demonstrate"`, and more. Run a quick grep before submitting.
 
@@ -167,9 +172,9 @@ Great-AAAI-Writing-Skills/
 │   ├── review-simulator/     PC-member view: scoring + Q&A + rebuttal
 │   └── paper-corpus/         50 award-winning paper abstracts + analysis
 │
-├── rules/                    Machine-readable AAAI-27 rule registry
-├── scripts/                  Stage-aware deterministic format checker
-├── tests/                    Checker regression tests
+├── rules/                    AAAI-27 format + reviewer-scoring rules
+├── scripts/                  Format checker + deterministic review scorer
+├── tests/                    Format and scoring regression tests
 │
 └── paper-types/              Type-specific injection layer
     ├── theory.md             ├── model-method.md

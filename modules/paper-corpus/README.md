@@ -32,7 +32,7 @@ YYYY_NN_Short_Title.txt
 These files are **reference data**, not loaded by Claude Code at runtime. They were used offline to:
 1. Extract statistical norms (word counts, structure frequencies)
 2. Build sentence templates from recurring patterns
-3. Calibrate the reviewer simulator scoring thresholds
+3. Provide non-scoring writing and presentation references for the reviewer simulator; the positive-only corpus is not used to infer acceptance thresholds
 4. Identify AAAI-specific writing conventions
 
 ## Copyright Note

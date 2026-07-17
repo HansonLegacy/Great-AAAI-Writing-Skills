@@ -5,6 +5,7 @@
 <div align="center">
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg?color=blue)](LICENSE)
+[![Version: 1.0.2](https://img.shields.io/badge/version-1.0.2-2ea44f.svg)](CHANGELOG.md)
 [![Claude Code](https://img.shields.io/badge/Claude%20Code-Skill-6C3C99?color=6C3C99)](https://claude.ai/code)
 [![Codex CLI](https://img.shields.io/badge/Codex-CLI-000000?color=000000)](https://github.com/openai/codex)
 [![AAAI 2027](https://img.shields.io/badge/AAAI-2027-1a5276?color=1a5276)](https://aaai.org/conference/aaai/aaai-27/)
@@ -70,7 +71,10 @@ git clone https://github.com/HansonLegacy/Great-AAAI-Writing-Skills.git %USERPRO
 
 > *"把我的论文当成 AAAI PC 成员来审一遍。"*
 
-内置的**审稿模拟器**从 **7 个维度**（significance、novelty、soundness、clarity、experiments、related work、reproducibility）给你的论文打分，评分基于真实 AAAI 录取阈值校准。输出结构化审稿报告——审稿人问题、弱点标注、rebuttal 策略建议。
+内置的**审稿模拟器**从 **7 个维度**（significance、novelty、soundness、evidence、clarity、related work、reproducibility）
+生成可追溯的 **0–6 Scientific Overall Score**（保留一位小数），并单独给出 **0–5 Assessment Confidence**。
+类型权重、缺失信息、科学门控和推荐区间均可复算；格式与匿名状态独立报告。该结果是诊断性模拟，不是 AAAI 官方分制或录用概率。
+每份报告固定以 Final Overall Score 和 Assessment Confidence 两行结束，便于快速查看和机器提取。
 
 你还能获得 **65+ 个审稿人触发词**（含正则模式），reviewer 看到就会皱眉的词：`"novel"`、`"first to"`、`"significantly outperforms"`、`"extensive experiments demonstrate"` 等。提交前 grep 一键扫描。
 
@@ -163,9 +167,9 @@ Great-AAAI-Writing-Skills/
 │   ├── review-simulator/     PC 视角：评分 + 问答 + rebuttal
 │   └── paper-corpus/         50 篇获奖论文摘要 + 分析
 │
-├── rules/                    AAAI-27 机器可读规则源
-├── scripts/                  分阶段确定性格式检查器
-├── tests/                    格式检查器回归测试
+├── rules/                    AAAI-27 格式规则 + 审稿评分规则
+├── scripts/                  格式检查器 + 确定性审稿评分器
+├── tests/                    格式与评分回归测试
 │
 └── paper-types/              类型专属注入层
     ├── theory.md             ├── model-method.md

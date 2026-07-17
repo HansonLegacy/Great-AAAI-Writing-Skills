@@ -18,7 +18,7 @@
     ┌──────▼──────────▼──────────────┐
     │          modules/               │
     │    (横向·跨章节交叉)              │
-    │    8 核心 + 6 review + 5        │
+    │    8 核心 + 6 review + 7        │
     │    review-simulator             │
     └────────────────────────────────┘
 ```
@@ -29,7 +29,7 @@
 |-----|------|--------|------|
 | **编排层** | `SKILL.md` | 1 | 入口、Phase 调度、类型注入、上游 skill 集成 |
 | **纵向层** | `sections/` | 7 | 按论文章节提供 Abstract/Intro/Method 等专属指导 |
-| **横向层** | `modules/` | 8+6+5 | 跨章节的写作工艺（句子、图表、审稿、格式） |
+| **横向层** | `modules/` | 8+6+7 | 跨章节的写作工艺（句子、图表、审稿、格式） |
 | **类型层** | `paper-types/` | 4 | 4 种论文类型的关键差异注入 |
 
 ## 路由机制
@@ -62,24 +62,24 @@ aaai-writing（编排层）
   │     https://github.com/Master-cai/Research-Paper-Writing-Skills (MIT)
   ├── paper-review                           → 上游审稿框架参考
   │     https://github.com/FanBroWell/AI-paper-reviewer (MIT)
-  ├── rules/ + scripts/                      → 本仓库内置格式规则与确定性检查器
+  ├── rules/ + scripts/                      → 内置格式规则/检查器与审稿评分规则/计算器
   └── aaai-paper                             → 规范速查手册（独立使用）
 ```
 
 **关键差异**：aaai-writing 不是简单拼接上游 skill，而是在上游方法论基础上叠加了：
 
 - AAAI 2027 Author Kit 约束（event-specific 页限、禁用包/命令、natbib 等）
-- 50 篇获奖论文的定量基准和实例
+- 50 篇获奖论文的写作模式参照和实例（不作为录取阈值）
 - 4 种论文类型的差异化策略
 
 ## 文件统计
 
 | 目录 | 文件数 | 总行数 |
 |------|--------|--------|
-| `sections/` | 7 | ~985 |
-| `modules/` (核心) | 8 | ~2,300 |
-| `modules/review/` | 6 | ~1,020 |
-| `modules/review-simulator/` | 5 | ~812 |
+| `sections/` | 7 | ~1,230 |
+| `modules/` (核心) | 8 | ~2,340 |
+| `modules/review/` | 6 | ~1,430 |
+| `modules/review-simulator/` | 7 | ~1,000 |
 | `paper-types/` | 4 | ~317 |
 | `paper-corpus/` | ~113 | (数据文件) |
-| **合计** | **31 .md** | **~6,375** |
+| **合计** | **33 .md** | **~6,620** |
