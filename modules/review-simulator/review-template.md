@@ -1,139 +1,150 @@
-# AAAI 审稿意见输出模板
+# AAAI 模拟审稿输出模板
 
-> 对标 AAAI 审稿系统（CMT/OpenReview）的标准审稿格式。
-> 所有 `[ ]` 为待填充项，审稿时逐项填写。
+> 非官方诊断模板。所有数值必须能从 `scoring-rubric.md` 和 scorecard 复算；所有判断必须指向当前论文材料。
 
----
+## 完整输出
 
-## 完整审稿输出模板
-
-```
+```text
 ═══════════════════════════════════════════
-AAAI 2027 Review Simulation
+AAAI Review Simulation
 ═══════════════════════════════════════════
 
-## Paper Summary（~150 words）
+Diagnostic simulation only — not an official AAAI score,
+acceptance probability, or multi-reviewer consensus.
 
-[用 reviewer 自己的话复述论文核心贡献。
-这有两个目的：
-  a) 展示 reviewer 是否正确理解了论文
-  b) 如果理解有偏差，作者可以在 rebuttal 中澄清
+## Review Scope
 
-模板：
-This paper addresses [problem/task] by proposing [method name],
-a [one-clause characterization]. The key idea is [core insight].
-The authors [what they did — e.g., "evaluate on X benchmarks and
-show Y% improvement over Z"]. The main claimed contribution is
-[specific contribution].
-]
+Paper type: [theory / model_method / benchmark_resource / application_driven]
+Materials reviewed: [full paper / abstract / appendix / supplement / artifacts]
+Unavailable materials: [... / none]
+Simulated reviewer profile: [... / not provided]
+External verification: [performed / partial / not performed]
+
+## Paper Summary
+
+[用 reviewer 自己的话复述问题、核心贡献、方法和主要证据。
+不得复制摘要，也不得加入论文没有声称的贡献。]
 
 ## Strengths
 
-1. [具体优点 — 指到论文中的具体位置或具体内容]
-   [例："The problem formulation in §2 is well-motivated and connects
-    clearly to the real-world challenge of X."]
+1. [具体优点]
+   - Evidence: [§X.Y / Table Z / Figure W / Appendix]
+   - Why it matters: [...]
 
-2. [具体优点]
-
-3. [具体优点]
-   [如适用：]
+2. [...]
 
 ## Weaknesses
 
-### 🔴 Critical（影响 accept/reject 决定）
+### Critical
 
 **C1. [问题]**
-  - 位置: [§X.Y / Table Z / Figure W]
-  - 问题描述: [具体说明]
-  - 影响: [这个弱点为什么可能导致拒稿]
-  - 修复建议: [如果作者可以修复的话，具体怎么做]
+- Primary dimension: [dimension id]
+- Location / evidence: [...]
+- Why it affects the decision: [...]
+- Resolution condition: [什么证据或修改可以解决]
+- Gate, if any: [gate id / none]
 
-**C2. ...**
-
-### 🟠 Major（显著扣分）
+### Major
 
 **M1. [问题]**
-  - 位置: [§X.Y]
-  - 问题描述: [具体说明]
-  - 建议: [具体改进方案]
+- Primary dimension: [...]
+- Location / evidence: [...]
+- Impact: [...]
+- Suggested action: [...]
 
-**M2. ...**
+### Minor
 
-### 🟡 Minor（可修复的细节）
+| # | Primary dimension | Location | Issue | Suggestion |
+|---|---|---|---|---|
+| 1 | ... | ... | ... | ... |
 
-| # | 位置 | 问题 | 建议 |
-|---|------|------|------|
-| 1 | §X.Y | ... | ... |
-| 2 | ... | ... | ... |
+## Seven-Dimension Scorecard
+
+| Dimension | Status | Weight | Score (0–6) | Evidence / Location | Main Concern |
+|---|---|---:|---:|---|---|
+| Significance | [...] | [...] | [...] | [...] | [...] |
+| Novelty | [...] | [...] | [...] | [...] | [...] |
+| Soundness | [...] | [...] | [...] | [...] | [...] |
+| Evidence | [...] | [...] | [...] | [...] | [...] |
+| Clarity | [...] | [...] | [...] | [...] | [...] |
+| Related Work | [...] | [...] | [...] | [...] | [...] |
+| Reproducibility | [...] | [...] | [...] | [...] | [...] |
+
+Status 只能为 ASSESSED / MISSING_IN_PAPER /
+UNAVAILABLE_TO_REVIEWER / NOT_APPLICABLE。
+
+## Scientific Rating
+
+Raw weighted score: [x.xxx / 6.0]
+Coverage: [xx% — COMPLETE / PROVISIONAL / INSUFFICIENT]
+Plausible range: [x.x–x.x / 6.0, when needed]
+
+Active scientific gates:
+- [gate id — cap — reason — evidence/location — resolution condition]
+- [none]
+
+Final Overall Score: [x.x / 6.0 or N/A]
+Recommendation: [Strong Reject / Reject / Weak Reject / Borderline /
+                 Weak Accept / Accept / Strong Accept / Insufficient information]
+
+Score rationale: [2–4 句，解释决定性维度和门控；不写录用概率。]
+
+## Assessment Confidence
+
+Material completeness: [0–2] — [reason]
+Verification depth: [0–2] — [reason]
+Reviewer-profile domain match: [0–1] — [reason]
+
+Confidence: [0–5] — [No confidence / Very Low / Low / Medium / High / Very High]
+Confidence limitations:
+- [...]
+- [...]
+
+## Compliance / Policy Status
+
+Format: [ERROR / WARNING / NOT_CHECKED / scoped PASS]
+Anonymity: [ERROR / WARNING / NOT_CHECKED / scoped PASS]
+Event-specific policy: [known result / NEEDS_POLICY]
+Notes: [...]
+
+These statuses are separate from the Scientific Overall Score.
+
+## Ethical / Safety Concerns
+
+[None identified within reviewed materials / concern + evidence + needed review]
 
 ## Questions & Suggestions
 
-1. **Q1**: [具体问题 — reviewer 希望作者在 rebuttal 中回答的]
-   [例："Why was baseline X not included in the comparison? X is the
-    most related prior work and would strengthen the evaluation."]
+1. [最可能改变评分的具体问题]
+2. [...]
+3. [非决定性的改进建议]
 
-2. **Q2**: ...
+## Rebuttal Priorities
 
-3. **S1**: [改进建议 — 不一定是 weakness，而是"如果加上会更好"]
-   [例："An analysis of how the method performs with different random
-    seeds would increase confidence in the results."]
+| Priority | Concern | Can rebuttal address it? | Required evidence |
+|---|---|---|---|
+| 1 | ... | fully / partially / unlikely | ... |
 
-## Overall Rating
+## Summary for AC
 
-[ ] Strong Accept (Top 5% — exceptional contribution, flawless execution)
-[ ] Accept (Top 20% — solid contribution, minor issues only)
-[ ] Weak Accept (Top 35% — good contribution, some concerns)
-[ ] Borderline (could go either way)
-[ ] Weak Reject (interesting but insufficient contribution/evidence)
-[ ] Reject (fundamental issues with contribution or evidence)
-
-## Confidence
-
-[ ] High — I know this specific sub-area well and have reviewed extensively in it
-[ ] Medium — I have general knowledge of this area
-[ ] Low — This topic is somewhat outside my core expertise
-
-## Ethical Concerns（如适用）
-
-[检查以下内容，如有问题在此标注]
-- 数据集是否涉及隐私/偏见/不适当使用？
-- 方法是否有明显的 dual-use 风险？
-- 实验是否涉及 human subjects（需 IRB）？
-
-## Summary for AC（2-3 句）
-
-[给 Area Chair 的精简总结，帮助 AC 在做 meta-review 时快速定位：
-- 这篇论文的核心贡献是什么？
-- 最关键的 Strengths 和 Weaknesses 各一条？
-- 你的最终建议（accept/reject）和核心理由？
-]
+[2–4 句：核心贡献、决定性优点、决定性问题、Final Score、Confidence，
+并说明 provisional / missing information / active gate（若有）。]
 
 ═══════════════════════════════════════════
+
+Final Overall Score: [x.x / 6.0 — Recommendation | N/A — Insufficient information]
+Assessment Confidence: [y / 5 — Confidence label]
 ```
 
----
+## 输出约束
 
-## 输出风格规范
-
-### 必须遵守
-
-1. **建设性而非攻击性**：不用 "the authors failed to..."，用 "the paper would benefit from..."
-2. **具体而不空洞**：每个评价指到论文中具体位置
-3. **区分事实和判断**：不确定的地方标注 "it is unclear whether..."
-4. **按 AAAI 标准评分**：不是 "写得好不好"，是 "这篇论文在 AAAI 的标准下能否被接受"
-
-### 避免的措辞
-
-| 避免 | 替代 |
-|------|------|
-| "The authors failed to..." | "The paper does not yet demonstrate..." |
-| "This is wrong" | "This appears inconsistent with..." / "This claim is not supported by..." |
-| "The method is simple" | "The technical contribution beyond [prior work] is not clearly articulated" |
-| "This paper is not novel" | "The differentiation from [closest prior work] needs to be more explicit" |
-
-### 关于评分
-
-- **Strong Accept** 非常罕见——仅当贡献确实 exceptional 且执行无瑕疵
-- **Accept** 是"我愿意在 AAAI 上看到这篇论文"——不是"这篇完美了"
-- **Borderline** 是 AAAI 最常见的 borderline 地带——有好的部分但也有 concerns
-- **Reject** 不等于"这篇论文不好"——可能适合其他会议
+1. 每个维度分必须有论文位置或明确的材料限制。
+2. `0` 只表示有证据的根本失败；未知使用 `N/A`。
+3. 同一问题只在一个主维度扣分，除非能解释独立的次级影响。
+4. gate 必须显式列出；不得静默压分。
+5. Final 保留一位小数；维度分使用 0.5 步进。
+6. Confidence 使用 0–5 整数，并与论文质量严格独立。
+7. 不使用 “Top 5%”“真实录取阈值”或录用概率措辞。
+8. 建设性描述问题，例如使用 “The paper does not yet establish...” 而不是攻击作者。
+9. 上述 Score Footer 必须是报告最后两个非空行，且必须与 Scientific Rating 和 Assessment Confidence 小节中的值完全一致。
+10. Score Footer 之后不得放免责声明、总结、分隔线或任何其他内容；免责声明必须提前出现。

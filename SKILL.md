@@ -233,15 +233,20 @@ python scripts/aaai27_check.py paper.tex --stage anonymous \
 
 | 文件 | 用途 | 加载时机 |
 |------|------|---------|
-| `SKILL.md` | 审稿模拟器入口 + 4 轮审稿工作流 | 用户要求模拟审稿时 |
-| `criteria.md` | 7 个 AAAI Reviewer 核心问题 + 按类型差异化权重 | Round 2 |
-| `review-workflow.md` | Round 1-4 详细步骤 + 每步检查点 | 全程 |
-| `scoring-calibration.md` | Accept/Reject 边界 + 50 篇获奖论文基准校准 | Round 3-4 |
-| `review-template.md` | AAAI 结构化审稿输出模板 | Round 4 |
+| `SKILL.md` | 诊断性审稿入口 + Preflight + 4 轮工作流 | 用户要求模拟审稿时 |
+| `criteria.md` | 7 个科学质量维度及四类论文证据标准 | Round 2 |
+| `scoring-rubric.md` | 0–6 Overall、类型权重、coverage、门控和独立 0–5 Confidence | Round 2-4 |
+| `review-workflow.md` | 证据账本、交叉核验和确定性聚合步骤 | 全程 |
+| `scoring-calibration.md` | 50 篇获奖论文的非评分写作参照；不得作为录取阈值 | Round 3 |
+| `review-template.md` | 含七维 scorecard、数值分和不确定性的结构化模板 | Round 4 |
 | `common-qa.md` | Reviewer 常问问题库 + Rebuttal 预判 | Round 4 |
+| `rules/aaai-review-scoring.json` | 机器可读权重、区间和科学门控 | Round 4 |
+| `scripts/aaai_review_score.py` | 确定性评分聚合器 | Round 4 |
 
 > **调用时机**：仅当用户说"模拟审稿"、"审这篇 paper"、"预估 review 结果"、"这篇能中 AAAI 吗"时加载。
 > **与 self-review 的区别**：self-review 是"我写完了，帮我找问题"（作者视角）；review-simulator 是"如果我是 AAAI PC member，我会怎么写审稿意见"（审稿人视角）。
+> **评分边界**：0–6 是内部诊断分，0–5 是当前评估的 Confidence；二者相互独立，均不是 AAAI 官方量表或录用概率。
+> **强制尾注**：每份模拟审稿必须以 `Final Overall Score` 和 `Assessment Confidence` 作为最后两个非空行结束。
 
 ### 章节子 Skill（`sections/`）
 

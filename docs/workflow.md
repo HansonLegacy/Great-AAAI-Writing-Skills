@@ -97,5 +97,5 @@ Phase 5: 合规+自审 → 格式合规 + AAAI 特化自审 + 双盲检查
 | 深度 | `modules/review/00-aaai-master-workflow.md` | 投稿前 1-2 周 |
 
 **额外工具**：
-- 审稿模拟器：`modules/review-simulator/SKILL.md`
+- 审稿模拟器：`modules/review-simulator/SKILL.md`，输出可复算的 0–6 Scientific Overall 与独立 0–5 Confidence
 - 格式自动化：运行 `python scripts/aaai27_check.py ...`；缺失工件保留 `NOT_CHECKED`

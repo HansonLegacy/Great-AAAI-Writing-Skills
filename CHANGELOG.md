@@ -7,6 +7,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.2] - 2026-07-17
+
+### Added
+
+- Enhanced AAAI review simulation with an evidence-backed seven-dimension scorecard, a reproducible 0–6 Scientific Overall Score, and an independent 0–5 Assessment Confidence
+- Machine-readable reviewer scoring rules, deterministic aggregation script, scientific gate reporting, coverage handling, and regression tests
+
+### Changed
+
+- Separated scientific quality, assessment confidence, and format/anonymity/event-policy statuses in the review simulator
+- Reclassified the 50-paper award corpus as a non-scoring writing reference instead of an acceptance-threshold calibration set
+- Required every simulated review to end with a fixed two-line footer containing the exact Overall Score and Assessment Confidence
+
 ## [1.0.1] - 2026-07-15
 
 ### Added
@@ -41,7 +54,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - 4 paper type specializations
 - 34 sentence templates + 15 Before/After rewrite pairs
 - 7 caption templates + 8 Before/After rewrite pairs
-- AAAI reviewer simulator with scoring calibration
+- AAAI reviewer simulator with qualitative recommendation labels
 - AAAI 2027 format compliance checker (8 categories)
 - 50-paper distilled patterns corpus (AAAI 2023-2026)
 - CI: Markdown lint, link checker, stale issue management

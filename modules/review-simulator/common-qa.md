@@ -1,13 +1,13 @@
 # Reviewer 常问问题库 & Rebuttal 预判
 
-> 基于 AAAI 审稿经验 + 50 篇获奖论文的薄弱点分析。
-> 审稿时预判 reviewer 最可能追问的问题，附带 rebuttal 策略建议。
+> 汇总常见审稿关注点，并提供 rebuttal 准备方向。
+> 本问题库只用于生成追问，不是评分证据，也不与 `criteria.md` 的维度编号对应。
 
 ---
 
-## 一、关于贡献（Q1 — 最高频）
+## 一、关于贡献与原创性
 
-### Q1.1 "What exactly is the contribution beyond [closest prior work]?"
+### N1 "What exactly is the contribution beyond [closest prior work]?"
 
 **为什么 reviewer 会问**：贡献不够突出，或与 prior work 的区分是 incremental 的。
 
@@ -15,7 +15,7 @@
 - 用 1-2 句明确陈述核心差异（不要用 "we are the first"，用 "Unlike X which does Y, we Z"）
 - 如果之前没写清楚差异，在 rebuttal 中补充具体对比表
 
-### Q1.2 "This seems like a straightforward combination of A and B. What is the technical insight?"
+### N2 "This seems like a straightforward combination of A and B. What is the technical insight?"
 
 **为什么 reviewer 会问**：方法看起来像现成模块的拼接。
 
@@ -24,7 +24,7 @@
 - 突出你在组合中做的非平凡设计决策
 - 如果有 Naive-A+B 的消融对比，在这里引用
 
-### Q1.3 "The contribution density doesn't justify the allotted pages."
+### N3 "The contribution density doesn't justify the allotted pages."
 
 **为什么 reviewer 会问**：正文有灌水段落，核心贡献只需 3-4 页就能说清。
 
@@ -34,9 +34,9 @@
 
 ---
 
-## 二、关于实验（Q2 — 最高频）
+## 二、关于证据与评估
 
-### Q2.1 "Why wasn't baseline X included?"
+### E1 "Why wasn't baseline X included?"
 
 **为什么 reviewer 会问**：X 是该领域最相关的工作，但实验中没有比较。
 
@@ -45,7 +45,7 @@
 - 如果有意不比较：给出技术理由（"X solves a different problem setting where..."）
 - 如果 X 是 concurrent work：说明并致歉
 
-### Q2.2 "Are the improvements statistically significant?"
+### E2 "Are the improvements statistically significant?"
 
 **为什么 reviewer 会问**：报告了 improvement 但没有 std/p-value。
 
@@ -53,7 +53,7 @@
 - 如果有 std：在 rebuttal 中补充统计检验结果
 - 如果没跑多次：说明实验条件限制，承诺在 final version 中补充
 
-### Q2.3 "Does the ablation cover every claimed contribution?"
+### E3 "Does the ablation cover every claimed contribution?"
 
 **为什么 reviewer 会问**：消融不完整——声称了 3 个贡献但只做了 2 个消融。
 
@@ -61,7 +61,7 @@
 - 如果遗漏了消融：补充后报告
 - 如果某贡献难以消融（如训练策略）：解释原因 + 提供替代的 evidence
 
-### Q2.4 "Are the results reproducible?"
+### E4 "Are the results reproducible?"
 
 **为什么 reviewer 会问**：超参数不透明、没有代码、没有 seeds。
 
@@ -70,7 +70,7 @@
 - 引用 AAAI 2027 Reproducibility Checklist
 - 承诺开源代码（如果之前没承诺）
 
-### Q2.5 "Why this specific choice of hyperparameters/datasets?"
+### E5 "Why this specific choice of hyperparameters/datasets?"
 
 **为什么 reviewer 会问**：选择理由不明确。
 
@@ -80,9 +80,9 @@
 
 ---
 
-## 三、关于方法（Q3）
+## 三、关于技术正确性与方法
 
-### Q3.1 "What is the motivation for this design choice?"
+### S1 "What is the motivation for this design choice?"
 
 **为什么 reviewer 会问**：某模块的设计理由没有解释。
 
@@ -90,7 +90,7 @@
 - 补充 Motivation 段落
 - 如果有对应的消融来验证该设计，指向消融
 
-### Q3.2 "Why not use [obvious alternative] instead?"
+### S2 "Why not use [obvious alternative] instead?"
 
 **为什么 reviewer 会问**：reviewer 能想到一个明显的替代方案，但你没讨论。
 
@@ -98,7 +98,7 @@
 - 如果试过替代方案且不 work：在 rebuttal 中报告
 - 如果没试过：解释为什么你的选择更适合 + 承诺在 final version 中讨论
 
-### Q3.3 "The notation is inconsistent / confusing."
+### S3 "The notation is inconsistent / confusing."
 
 **为什么 reviewer 会问**：符号定义不清楚或前后冲突。
 
@@ -110,7 +110,7 @@
 
 ## 四、关于适用范围
 
-### Q4.1 "How well does this method generalize beyond the tested benchmarks?"
+### G1 "How well does this method generalize beyond the tested benchmarks?"
 
 **为什么 reviewer 会问**：只在 1-2 个相似 benchmark 上测试了。
 
@@ -118,7 +118,7 @@
 - 如果测试了更多但没全放进正文：在 rebuttal 中报告
 - 如果确实有限：诚实地将其列为 limitation，讨论为什么相信能泛化
 
-### Q4.2 "What are the computational requirements for real-world deployment?"
+### G2 "What are the computational requirements for real-world deployment?"
 
 **为什么 reviewer 会问**：没有报告 inference time/params。
 
